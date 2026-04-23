@@ -1,26 +1,570 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Quantico';
+  src: url('/fonts/quantico.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #E15C55;
+  --bg: #101010;
+  --dark-neutral: #1C1C1C;
+  --white: #FFFFFF;
+  --body: rgba(255, 255, 255, 0.6);
+  --light: rgba(255, 255, 255, 0.1);
+  --container: 1300px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: #E15C55;
+  --color-background: #101010;
+  --font-quantico: 'Quantico', sans-serif;
+  --font-inter: var(--font-inter, 'Inter', sans-serif);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--body);
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quantico', sans-serif;
+  color: var(--white);
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 72px;
+  letter-spacing: -0.05em;
+}
+
+h2 {
+  font-size: 54px;
+  letter-spacing: -0.05em;
+}
+
+h3 {
+  font-size: 36px;
+  letter-spacing: -0.005em;
+}
+
+h4 {
+  font-size: 28px;
+  letter-spacing: -0.005em;
+}
+
+h5 {
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+
+h6 {
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: var(--primary);
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+p {
+  color: var(--body);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 24px;
+  }
+  h1 { font-size: 58px; }
+  h2 { font-size: 44px; }
+  h3 { font-size: 32px; }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+  h1 { font-size: 34px; }
+  h2 { font-size: 28px; }
+  h3 { font-size: 18px; }
+  h4 { font-size: 22px; }
+  p { font-size: 16px; }
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 16px 32px;
+  border-radius: 6px;
+  transition: background 0.25s, transform 0.2s;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn-primary:hover {
+  background: #c94a44;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 14px 30px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.25);
+  transition: background 0.25s, border-color 0.25s;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn-outline:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.5);
+}
+
+/* Section padding */
+.section-pad {
+  padding: 100px 0;
+}
+@media (max-width: 1024px) {
+  .section-pad { padding: 75px 0; }
+}
+@media (max-width: 768px) {
+  .section-pad { padding: 50px 0; }
+}
+
+/* Highlighted text underline */
+.text-highlight {
+  position: relative;
+  display: inline;
+  color: var(--primary);
+}
+
+/* Check icon */
+.check-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* Dark card */
+.dark-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 28px;
+  transition: border-color 0.25s, background 0.25s;
+}
+.dark-card:hover {
+  border-color: rgba(225,92,85,0.3);
+  background: rgba(225,92,85,0.04);
+}
+
+/* Accordion */
+.accordion-item {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.accordion-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-family: 'Quantico', sans-serif;
+  font-size: 17px;
+  cursor: pointer;
+  text-align: left;
+  gap: 16px;
+}
+.accordion-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+.accordion-content.open {
+  max-height: 500px;
+  padding-bottom: 20px;
+}
+
+/* Testimonial */
+.testimonial-stars {
+  color: var(--primary);
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  animation: marquee 20s linear infinite;
+  width: max-content;
+}
+
+/* Section overline */
+.overline {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary);
+  display: inline-block;
+  margin-bottom: 12px;
+  background: rgba(225,92,85,0.1);
+  border: 1px solid rgba(225,92,85,0.25);
+  border-radius: 999px;
+  padding: 4px 14px;
+}
+
+/* Icon box */
+.icon-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 0;
+}
+.icon-box-icon {
+  width: 40px;
+  height: 40px;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+.icon-box-small {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.icon-box-small .icon {
+  width: 20px;
+  height: 20px;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+/* Grid 2-col feature */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Vehicle card */
+.vehicle-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.25s, transform 0.25s;
+}
+.vehicle-card:hover {
+  border-color: rgba(225,92,85,0.4);
+  transform: translateY(-4px);
+}
+.vehicle-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.vehicle-card-body {
+  padding: 16px 20px 20px;
+}
+.vehicle-card-body h3 {
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+.vehicle-card-body a {
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+}
+
+/* CTA box with rotating border */
+.cta-box {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(213,213,213,0.3);
+  border-radius: 20px;
+  padding: 48px;
+}
+@media (max-width: 768px) {
+  .cta-box { padding: 32px 24px; }
+}
+
+/* Shape divider */
+.shape-divider {
+  position: relative;
+}
+.shape-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: var(--bg);
+  clip-path: polygon(0 0, 100% 0, 73.8% 100%, 0 56%);
+  z-index: 1;
+}
+
+/* Back to top */
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 44px;
+  height: 44px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 999;
+}
+#back-to-top.visible {
+  opacity: 1;
+}
+
+/* =============================================
+   ANIMATIONS
+   ============================================= */
+
+/* ── Reduced-motion respect ─────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Hero entrance — time-based, runs on page load ── */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(22px); filter: blur(5px); }
+  to   { opacity: 1; transform: translateY(0);    filter: blur(0);   }
+}
+@keyframes heroFadeRight {
+  from { opacity: 0; transform: translateX(28px); }
+  to   { opacity: 1; transform: translateX(0);    }
+}
+
+.hero-enter    { animation: heroFadeUp   0.85s cubic-bezier(0.16,1,0.3,1) both; }
+.hero-right    { animation: heroFadeRight 0.85s cubic-bezier(0.16,1,0.3,1) both; }
+.hero-d0  { animation-delay:   0ms; }
+.hero-d1  { animation-delay: 140ms; }
+.hero-d2  { animation-delay: 280ms; }
+.hero-d3  { animation-delay: 420ms; }
+.hero-d4  { animation-delay: 560ms; }
+.hero-d5  { animation-delay: 700ms; }
+.hero-d6  { animation-delay: 840ms; }
+
+/* ── Floating glow pulse (hero accent) ─────── */
+@keyframes floatGlow {
+  0%, 100% { transform: scale(1)   translateY(0);   opacity: 0.15; }
+  50%       { transform: scale(1.08) translateY(-20px); opacity: 0.22; }
+}
+.glow-float {
+  animation: floatGlow 7s ease-in-out infinite;
+}
+
+/* ── CTA button pulse ───────────────────────── */
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(225,92,85,0); }
+  50%       { box-shadow: 0 0 0 8px rgba(225,92,85,0.18); }
+}
+.btn-primary {
+  animation: ctaPulse 3s ease-in-out infinite;
+}
+.btn-primary:hover {
+  animation: none;
+}
+
+/* ── JS-based scroll reveal (IntersectionObserver fallback) ── */
+/* Default hidden state — only when JS class NOT yet applied */
+.scroll-up:not(.is-visible),
+.scroll-fade:not(.is-visible),
+.scroll-scale:not(.is-visible) {
+  opacity: 0;
+}
+.scroll-up:not(.is-visible)    { transform: translateY(36px); }
+.scroll-scale:not(.is-visible) { transform: scale(0.93); }
+
+/* Revealed state */
+.scroll-up.is-visible,
+.scroll-fade.is-visible,
+.scroll-scale.is-visible {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1),
+              transform 0.65s cubic-bezier(0.16,1,0.3,1);
+}
+
+/* Stagger delays for JS-based reveal */
+.scroll-up.scroll-d1.is-visible,
+.scroll-fade.scroll-d1.is-visible,
+.scroll-scale.scroll-d1.is-visible { transition-delay: 120ms; }
+.scroll-up.scroll-d2.is-visible,
+.scroll-fade.scroll-d2.is-visible,
+.scroll-scale.scroll-d2.is-visible { transition-delay: 240ms; }
+.scroll-up.scroll-d3.is-visible,
+.scroll-fade.scroll-d3.is-visible,
+.scroll-scale.scroll-d3.is-visible { transition-delay: 360ms; }
+.scroll-up.scroll-d4.is-visible,
+.scroll-fade.scroll-d4.is-visible,
+.scroll-scale.scroll-d4.is-visible { transition-delay: 480ms; }
+
+/* ── CSS animation-timeline (modern Chromium/Firefox) — overrides JS approach ── */
+@supports (animation-timeline: view()) {
+  @keyframes scrollUp {
+    from { opacity: 0; transform: translateY(38px); }
+    to   { opacity: 1; transform: translateY(0);    }
+  }
+  @keyframes scrollFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes scrollScale {
+    from { opacity: 0; transform: scale(0.93); }
+    to   { opacity: 1; transform: scale(1);    }
+  }
+
+  /* Override JS-reveal defaults for browsers that support view() */
+  .scroll-up:not(.is-visible),
+  .scroll-fade:not(.is-visible),
+  .scroll-scale:not(.is-visible) {
+    opacity: initial;
+    transform: initial;
+  }
+
+  .scroll-up {
+    animation: scrollUp 0.7s cubic-bezier(0.16,1,0.3,1) both;
+    animation-timeline: view();
+    animation-range: entry 5% entry 32%;
+  }
+  .scroll-fade {
+    animation: scrollFade 0.7s ease both;
+    animation-timeline: view();
+    animation-range: entry 5% entry 32%;
+  }
+  .scroll-scale {
+    animation: scrollScale 0.7s cubic-bezier(0.16,1,0.3,1) both;
+    animation-timeline: view();
+    animation-range: entry 5% entry 32%;
+  }
+
+  /* Stagger offsets (column-level) */
+  .scroll-d1 { animation-range: entry 12% entry 40%; }
+  .scroll-d2 { animation-range: entry 19% entry 48%; }
+  .scroll-d3 { animation-range: entry 26% entry 56%; }
+  .scroll-d4 { animation-range: entry 33% entry 64%; }
+}
+
+/* ── Card shimmer on hover ──────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.dark-card {
+  position: relative;
+  overflow: hidden;
+}
+.dark-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg,
+    transparent 40%,
+    rgba(225,92,85,0.06) 50%,
+    transparent 60%
+  );
+  background-size: 200% 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.dark-card:hover::after {
+  opacity: 1;
+  animation: shimmer 0.8s ease forwards;
+}
+
+/* ── Number counter entrance ────────────────── */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px) scale(0.9); }
+  to   { opacity: 1; transform: translateY(0)    scale(1);   }
+}
+.counter-enter {
+  animation: countUp 0.5s cubic-bezier(0.16,1,0.3,1) both;
+}
+
+/* ── Fallback: legacy fadeInUp ──────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease both;
 }
