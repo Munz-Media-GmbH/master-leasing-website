@@ -3,6 +3,10 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactCompiler: true,
 
+  // Allow preview tool origin for local dev
+  allowedDevOrigins: ["127.0.0.1"],
+
+
   // Kompression aktivieren
   compress: true,
 
