@@ -60,9 +60,9 @@ export default function Hero() {
         height: "100vh",
         minHeight: "600px",
         display: "flex",
-        alignItems: "center",
-        paddingTop: "120px",
-        paddingBottom: "60px",
+        alignItems: "flex-start",
+        paddingTop: "110px",
+        paddingBottom: "32px",
         overflow: "hidden",
       }}
     >
@@ -136,7 +136,7 @@ export default function Hero() {
           <div>
             <h1
               className="hero-enter hero-d0"
-              style={{ color: "#fff", marginBottom: "24px", lineHeight: 1.05 }}
+              style={{ color: "#fff", marginBottom: "16px", lineHeight: 1.05 }}
             >
               Auto leasen{" "}
               <span style={{ color: "#E15C55" }}>ohne Schufa</span>
@@ -145,10 +145,10 @@ export default function Hero() {
             <p
               className="hero-enter hero-d1"
               style={{
-                fontSize: "18px",
-                lineHeight: 1.7,
+                fontSize: "16px",
+                lineHeight: 1.6,
                 color: "rgba(255,255,255,0.7)",
-                marginBottom: "28px",
+                marginBottom: "16px",
                 maxWidth: "520px",
               }}
             >
@@ -170,8 +170,8 @@ export default function Hero() {
                 listStyle: "none",
                 display: "flex",
                 flexDirection: "column",
-                gap: "10px",
-                marginBottom: "28px",
+                gap: "8px",
+                marginBottom: "14px",
               }}
             >
               {checkItems.map((item) => (
@@ -196,8 +196,8 @@ export default function Hero() {
               className="hero-enter hero-d3"
               style={{
                 color: "rgba(255,255,255,0.7)",
-                fontSize: "16px",
-                marginBottom: "36px",
+                fontSize: "15px",
+                marginBottom: "18px",
               }}
             >
               Bei Master Leasing sind Sie in besten Händen. Wir machen Ihr
@@ -209,9 +209,9 @@ export default function Hero() {
               className="hero-enter hero-d4"
               style={{
                 display: "flex",
-                gap: "16px",
+                gap: "14px",
                 flexWrap: "wrap",
-                marginBottom: "48px",
+                marginBottom: "24px",
               }}
             >
               <a href="/kontakt" className="btn-primary">
