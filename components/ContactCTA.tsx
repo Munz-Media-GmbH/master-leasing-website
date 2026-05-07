@@ -1,6 +1,9 @@
 "use client";
+import { useContactModal } from "@/context/ContactModalContext";
 
 export default function ContactCTA() {
+  const { openModal } = useContactModal();
+
   return (
     <section
       className="section-pad"
@@ -90,12 +93,17 @@ export default function ContactCTA() {
               Jetzt Leasinganfrage stellen und Kontakt aufnehmen – Ihr Traumauto wartet auf
               Sie!
             </p>
-            <a href="https://master-leasing.com/kontakt/" className="btn-primary">
+            <button
+              type="button"
+              onClick={() => openModal()}
+              className="btn-primary"
+              style={{ border: "none", cursor: "pointer" }}
+            >
               <svg width="16" height="16" viewBox="0 0 256 512" fill="currentColor">
                 <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
               </svg>
               Kontakt aufnehmen
-            </a>
+            </button>
           </div>
 
           {/* Right: Contact info */}

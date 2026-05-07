@@ -2,6 +2,7 @@
 import { useState, useMemo } from "react";
 import Image from "next/image";
 import { Lightning, GasCan, Palette, Wrench } from "@phosphor-icons/react";
+import { useContactModal } from "@/context/ContactModalContext";
 
 // ─── Static vehicle data with filter fields ──────────────────────────────────────────────
 
@@ -214,6 +215,7 @@ export default function VehiclesSection({ vehicles: _vehicles }: { vehicles?: an
   const [activeMotor, setActiveMotor] = useState("alle");
   const [activeFarbe, setActiveFarbe] = useState("alle");
   const [activeLeistung, setActiveLeistung] = useState("alle");
+  const { openModal } = useContactModal();
 
   // ── Dynamisch: nur Optionen anzeigen, die wirklich vorkommen ──
   const availableTypen = useMemo(() => {
@@ -451,9 +453,14 @@ export default function VehiclesSection({ vehicles: _vehicles }: { vehicles?: an
           }}>
             Wir beschaffen jedes Fahrzeug — einfach Anfrage stellen, wir melden uns in 24h.
           </p>
-          <a href="/kontakt" className="btn-primary">
+          <button
+            type="button"
+            onClick={() => openModal()}
+            className="btn-primary"
+            style={{ border: "none", cursor: "pointer" }}
+          >
             Individuelle Anfrage stellen →
-          </a>
+          </button>
         </div>
       </div>
 

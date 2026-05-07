@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useContactModal } from "@/context/ContactModalContext";
 
 const faqs = [
   {
@@ -42,6 +43,7 @@ const MinusIcon = () => (
 
 export default function FAQSection() {
   const [open, setOpen] = useState<number | null>(null);
+  const { openModal } = useContactModal();
 
   return (
     <section
@@ -69,13 +71,14 @@ export default function FAQSection() {
               Haben Sie noch Fragen? Hier finden Sie Antworten auf die häufigsten Fragen rund
               um unser Auto Leasing ohne Schufa.
             </p>
-            <a
-              href="https://master-leasing.com/kontakt/"
+            <button
+              type="button"
+              onClick={() => openModal()}
               className="btn-primary"
-              style={{ marginTop: "32px", display: "inline-flex" }}
+              style={{ marginTop: "32px", display: "inline-flex", border: "none", cursor: "pointer" }}
             >
               Weitere Fragen? Kontakt aufnehmen
-            </a>
+            </button>
           </div>
 
           {/* Right: Accordion */}
