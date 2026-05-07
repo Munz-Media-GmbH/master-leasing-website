@@ -57,11 +57,12 @@ export default function Hero() {
     <section
       style={{
         position: "relative",
-        minHeight: "90vh",
+        height: "100vh",
+        minHeight: "600px",
         display: "flex",
         alignItems: "center",
         paddingTop: "120px",
-        paddingBottom: "80px",
+        paddingBottom: "60px",
         overflow: "hidden",
       }}
     >
