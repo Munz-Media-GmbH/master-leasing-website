@@ -1,0 +1,164 @@
+<h2>Kontaktformular als Popup — welches Design?</h2>
+<p class="subtitle">Der 4-Schritt-Funnel (Fahrzeugtyp → Objektdaten → Persönliche Daten → Unternehmen) soll als Modal erscheinen. Welche Variante passt am besten?</p>
+
+<div class="cards">
+
+  <!-- Option A -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0d0d0d;padding:16px;border-radius:8px 8px 0 0;">
+      <!-- Mockup A: zentriertes Modal -->
+      <div style="background:rgba(0,0,0,0.7);border-radius:6px;padding:10px;display:flex;align-items:center;justify-content:center;">
+        <div style="background:#141414;border:1px solid rgba(255,255,255,0.12);border-radius:12px;width:100%;max-width:340px;padding:18px;">
+          <!-- Progress bar -->
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+            <span style="color:rgba(255,255,255,0.4);font-size:10px;">Schritt 1 von 4</span>
+            <span style="color:#E15C55;font-size:10px;font-weight:700;">0%</span>
+          </div>
+          <div style="height:3px;background:rgba(255,255,255,0.08);border-radius:2px;margin-bottom:14px;">
+            <div style="width:5%;height:100%;background:#E15C55;border-radius:2px;"></div>
+          </div>
+          <!-- Title -->
+          <div style="color:#fff;font-size:13px;font-weight:700;margin-bottom:10px;">Um welche Art Fahrzeug geht es?</div>
+          <!-- Cards grid 3x2 -->
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:12px;">
+            <div style="background:#E15C55;border-radius:6px;aspect-ratio:4/3;display:flex;align-items:flex-end;justify-content:center;padding:4px;">
+              <span style="color:#fff;font-size:8px;font-weight:600;">PKW ✓</span>
+            </div>
+            <div style="background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);border-radius:6px;aspect-ratio:4/3;display:flex;align-items:flex-end;justify-content:center;padding:4px;">
+              <span style="color:#aaa;font-size:8px;">Nutzfahrzeug</span>
+            </div>
+            <div style="background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);border-radius:6px;aspect-ratio:4/3;display:flex;align-items:flex-end;justify-content:center;padding:4px;">
+              <span style="color:#aaa;font-size:8px;">LKW</span>
+            </div>
+            <div style="background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);border-radius:6px;aspect-ratio:4/3;display:flex;align-items:flex-end;justify-content:center;padding:4px;">
+              <span style="color:#aaa;font-size:8px;">Landwirtschaft</span>
+            </div>
+            <div style="background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);border-radius:6px;aspect-ratio:4/3;display:flex;align-items:flex-end;justify-content:center;padding:4px;">
+              <span style="color:#aaa;font-size:8px;">Geräte</span>
+            </div>
+            <div style="background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);border-radius:6px;aspect-ratio:4/3;display:flex;align-items:flex-end;justify-content:center;padding:4px;">
+              <span style="color:#aaa;font-size:8px;">Sonstiges</span>
+            </div>
+          </div>
+          <!-- Next button -->
+          <div style="background:#E15C55;color:#fff;font-size:10px;font-weight:600;padding:8px 12px;border-radius:6px;text-align:center;">Weiter →</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Zentriertes Modal</h3>
+      <p>Wie die bestehende QuickContactModal, aber mit dem 4-Schritt-Funnel. Overlay verdunkelt den Hintergrund, Modal erscheint mittig. Kompakt, klar, bekanntes Pattern.</p>
+    </div>
+  </div>
+
+  <!-- Option B -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0d0d0d;padding:16px;border-radius:8px 8px 0 0;">
+      <!-- Mockup B: breites 2-col Modal -->
+      <div style="background:rgba(0,0,0,0.7);border-radius:6px;padding:10px;display:flex;align-items:center;justify-content:center;">
+        <div style="background:#141414;border:1px solid rgba(255,255,255,0.12);border-radius:12px;width:100%;padding:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <!-- Left: form -->
+          <div>
+            <div style="color:rgba(255,255,255,0.4);font-size:9px;margin-bottom:6px;">Schritt 1 von 4 — 0%</div>
+            <div style="height:3px;background:rgba(255,255,255,0.08);border-radius:2px;margin-bottom:10px;">
+              <div style="width:5%;height:100%;background:#E15C55;border-radius:2px;"></div>
+            </div>
+            <div style="color:#fff;font-size:11px;font-weight:700;margin-bottom:8px;">Art des Fahrzeugs?</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:10px;">
+              <div style="background:#E15C55;border-radius:5px;padding:5px;text-align:center;">
+                <span style="color:#fff;font-size:8px;font-weight:600;">PKW ✓</span>
+              </div>
+              <div style="background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);border-radius:5px;padding:5px;text-align:center;">
+                <span style="color:#888;font-size:8px;">Nutzfahrzeug</span>
+              </div>
+              <div style="background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);border-radius:5px;padding:5px;text-align:center;">
+                <span style="color:#888;font-size:8px;">LKW</span>
+              </div>
+              <div style="background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);border-radius:5px;padding:5px;text-align:center;">
+                <span style="color:#888;font-size:8px;">Geräte</span>
+              </div>
+            </div>
+            <div style="background:#E15C55;color:#fff;font-size:9px;font-weight:600;padding:6px;border-radius:5px;text-align:center;">Weiter →</div>
+          </div>
+          <!-- Right: contact info sidebar -->
+          <div style="border-left:1px solid rgba(255,255,255,0.07);padding-left:12px;">
+            <div style="color:rgba(255,255,255,0.35);font-size:8px;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:6px;">Direkter Kontakt</div>
+            <div style="color:#fff;font-size:10px;font-weight:700;margin-bottom:8px;">Wir sind für Sie da</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div style="display:flex;align-items:center;gap:6px;">
+                <div style="width:20px;height:20px;background:rgba(225,92,85,0.12);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:8px;">📞</div>
+                <div>
+                  <div style="color:rgba(255,255,255,0.35);font-size:7px;">Telefon</div>
+                  <div style="color:#E15C55;font-size:9px;">03331 – 29 77 92</div>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;">
+                <div style="width:20px;height:20px;background:rgba(225,92,85,0.12);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:8px;">✉️</div>
+                <div>
+                  <div style="color:rgba(255,255,255,0.35);font-size:7px;">E-Mail</div>
+                  <div style="color:rgba(255,255,255,0.7);font-size:8px;">anfrage@master-leasing.com</div>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;">
+                <div style="width:20px;height:20px;background:rgba(225,92,85,0.12);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:8px;">⏰</div>
+                <div>
+                  <div style="color:rgba(255,255,255,0.35);font-size:7px;">Öffnungszeiten</div>
+                  <div style="color:rgba(255,255,255,0.7);font-size:8px;">Mo–Fr, 07–16 Uhr</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Breites Modal mit Sidebar</h3>
+      <p>Wie die /kontakt-Seite, aber als Modal. Links der 4-Schritt-Funnel, rechts Kontaktinfos (Telefon, E-Mail, Öffnungszeiten). Mehr Kontext, mehr Vertrauen.</p>
+    </div>
+  </div>
+
+  <!-- Option C -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0d0d0d;padding:16px;border-radius:8px 8px 0 0;">
+      <!-- Mockup C: Fullscreen / right drawer -->
+      <div style="background:rgba(0,0,0,0.7);border-radius:6px;padding:0;display:flex;align-items:stretch;height:160px;overflow:hidden;">
+        <!-- Left: darkened website -->
+        <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:10px;">
+          <div style="text-align:center;">
+            <div style="color:rgba(255,255,255,0.2);font-size:9px;">Website im Hintergrund</div>
+          </div>
+        </div>
+        <!-- Right: drawer -->
+        <div style="background:#141414;width:55%;padding:14px;border-left:1px solid rgba(255,255,255,0.1);display:flex;flex-direction:column;gap:8px;">
+          <div style="color:rgba(255,255,255,0.4);font-size:8px;">Schritt 1 von 4</div>
+          <div style="height:2px;background:rgba(255,255,255,0.08);border-radius:2px;">
+            <div style="width:5%;height:100%;background:#E15C55;border-radius:2px;"></div>
+          </div>
+          <div style="color:#fff;font-size:10px;font-weight:700;">Art des Fahrzeugs?</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;flex:1;">
+            <div style="background:#E15C55;border-radius:4px;display:flex;align-items:center;justify-content:center;">
+              <span style="color:#fff;font-size:7px;font-weight:600;">PKW ✓</span>
+            </div>
+            <div style="background:#1e1e1e;border-radius:4px;display:flex;align-items:center;justify-content:center;">
+              <span style="color:#888;font-size:7px;">Nutzfahrzeug</span>
+            </div>
+            <div style="background:#1e1e1e;border-radius:4px;display:flex;align-items:center;justify-content:center;">
+              <span style="color:#888;font-size:7px;">LKW</span>
+            </div>
+            <div style="background:#1e1e1e;border-radius:4px;display:flex;align-items:center;justify-content:center;">
+              <span style="color:#888;font-size:7px;">Geräte</span>
+            </div>
+          </div>
+          <div style="background:#E15C55;color:#fff;font-size:8px;font-weight:600;padding:5px;border-radius:4px;text-align:center;">Weiter →</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Rechter Drawer (Slide-in)</h3>
+      <p>Panel fährt von rechts ein, wie ein "Side Sheet". Seite bleibt im Hintergrund sichtbar. Moderner UX-Pattern, kein hartes Overlay. Gut auf Mobile.</p>
+    </div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top:24px;">Klick auf eine Karte um sie auszuwählen, dann Bescheid sagen.</p>
