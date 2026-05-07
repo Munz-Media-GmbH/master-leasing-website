@@ -1,9 +1,31 @@
+import Image from "next/image";
+
 const brands = [
-  "Volkswagen", "BMW", "Mercedes-Benz", "Audi", "Toyota",
-  "Hyundai", "Ford", "Opel", "Renault", "Peugeot",
-  "Škoda", "SEAT", "Kia", "Volvo", "Nissan",
-  "Citroën", "Mazda", "Honda", "Mitsubishi", "Fiat",
-  "Jeep", "Land Rover", "Porsche", "Dacia", "Tesla",
+  { name: "Volkswagen", logo: "/images/brands/volkswagen.svg" },
+  { name: "BMW",        logo: "/images/brands/bmw.svg" },
+  { name: "Mercedes-Benz", logo: "/images/brands/mercedes.svg" },
+  { name: "Audi",      logo: "/images/brands/audi.svg" },
+  { name: "Toyota",    logo: "/images/brands/toyota.svg" },
+  { name: "Hyundai",   logo: "/images/brands/hyundai.svg" },
+  { name: "Ford",      logo: "/images/brands/ford.svg" },
+  { name: "Opel",      logo: "/images/brands/opel.svg" },
+  { name: "Renault",   logo: "/images/brands/renault.svg" },
+  { name: "Peugeot",   logo: "/images/brands/peugeot.svg" },
+  { name: "Škoda",     logo: "/images/brands/skoda.svg" },
+  { name: "SEAT",      logo: "/images/brands/seat.svg" },
+  { name: "Kia",       logo: "/images/brands/kia.svg" },
+  { name: "Volvo",     logo: "/images/brands/volvo.svg" },
+  { name: "Nissan",    logo: "/images/brands/nissan.svg" },
+  { name: "Citroën",   logo: "/images/brands/citroen.svg" },
+  { name: "Mazda",     logo: "/images/brands/mazda.svg" },
+  { name: "Honda",     logo: "/images/brands/honda.svg" },
+  { name: "Mitsubishi",logo: "/images/brands/mitsubishi.svg" },
+  { name: "Fiat",      logo: "/images/brands/fiat.svg" },
+  { name: "Jeep",      logo: "/images/brands/jeep.svg" },
+  { name: "Land Rover",logo: "/images/brands/landrover.svg" },
+  { name: "Porsche",   logo: "/images/brands/porsche.svg" },
+  { name: "Dacia",     logo: "/images/brands/dacia.svg" },
+  { name: "Tesla",     logo: "/images/brands/tesla.svg" },
 ];
 
 export default function BrandsCarousel() {
@@ -13,7 +35,7 @@ export default function BrandsCarousel() {
         background: "#0a0a0a",
         borderTop: "1px solid rgba(255,255,255,0.06)",
         borderBottom: "1px solid rgba(255,255,255,0.06)",
-        padding: "28px 0",
+        padding: "24px 0",
         overflow: "hidden",
       }}
     >
@@ -28,17 +50,44 @@ export default function BrandsCarousel() {
               key={i}
               style={{
                 flexShrink: 0,
-                marginRight: "56px",
+                marginRight: "52px",
                 display: "flex",
+                flexDirection: "column",
                 alignItems: "center",
-                gap: "10px",
-                opacity: 0.45,
-                whiteSpace: "nowrap",
+                gap: "8px",
+                opacity: 0.5,
               }}
             >
-              <span style={{ width: "5px", height: "5px", borderRadius: "50%", background: "#E15C55", display: "inline-block", flexShrink: 0 }} />
-              <span style={{ fontFamily: "'Quantico', sans-serif", fontSize: "15px", color: "#fff", letterSpacing: "0.04em", textTransform: "uppercase" }}>
-                {brand}
+              <div
+                style={{
+                  width: "44px",
+                  height: "36px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  filter: "invert(1)",
+                }}
+              >
+                <Image
+                  src={brand.logo}
+                  alt={brand.name}
+                  width={44}
+                  height={36}
+                  unoptimized
+                  style={{ objectFit: "contain", width: "100%", height: "100%" }}
+                />
+              </div>
+              <span
+                style={{
+                  fontFamily: "'Quantico', sans-serif",
+                  fontSize: "10px",
+                  color: "#fff",
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {brand.name}
               </span>
             </div>
           ))}
