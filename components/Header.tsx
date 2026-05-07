@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useContactModal } from "@/context/ContactModalContext";
 
 const navLinks = [
   { label: "Startseite", href: "/" },
@@ -14,6 +15,7 @@ const navLinks = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { openModal } = useContactModal();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -83,13 +85,14 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <a
-            href="/kontakt"
+          <button
+            type="button"
+            onClick={() => openModal()}
             className="btn-primary"
-            style={{ fontSize: "14px", padding: "12px 24px" }}
+            style={{ fontSize: "14px", padding: "12px 24px", border: "none", cursor: "pointer" }}
           >
             Leasinganfrage stellen
-          </a>
+          </button>
         </nav>
 
         {/* Hamburger */}
@@ -155,13 +158,14 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <a
-            href="/kontakt"
+          <button
+            type="button"
+            onClick={() => { setMobileOpen(false); openModal(); }}
             className="btn-primary"
-            style={{ marginTop: "20px", display: "inline-flex" }}
+            style={{ marginTop: "20px", display: "inline-flex", border: "none", cursor: "pointer" }}
           >
             Leasinganfrage stellen
-          </a>
+          </button>
         </div>
       )}
 
