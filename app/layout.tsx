@@ -4,6 +4,8 @@ import Script from "next/script";
 import "./globals.css";
 import ScrollRevealInit from "@/components/ScrollRevealInit";
 import CookieBanner from "@/components/CookieBanner";
+import { ContactModalProvider } from "@/context/ContactModalContext";
+import ContactFunnelModal from "@/components/ContactFunnelModal";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -145,13 +147,16 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        <ScrollRevealInit />
-        {children}
-        <CookieBanner />
-        <script
-          src="https://base.muenzmedia.de/api/track/mm.js?client=master-leasing"
-          defer
-        />
+        <ContactModalProvider>
+          <ScrollRevealInit />
+          {children}
+          <CookieBanner />
+          <ContactFunnelModal />
+          <script
+            src="https://base.muenzmedia.de/api/track/mm.js?client=master-leasing"
+            defer
+          />
+        </ContactModalProvider>
       </body>
     </html>
   );
