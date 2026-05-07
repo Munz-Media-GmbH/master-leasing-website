@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ModalOpenButton from "@/components/ModalOpenButton";
 
 export const metadata: Metadata = {
   title: "Über uns – Master Leasing | Fair. Einfach. Seriös.",
@@ -320,9 +321,9 @@ export default function UeberUnsPage() {
                   aus zufriedenen Kunden, Autohäusern und Händlern erstreckt sich über
                   ganz Deutschland.
                 </p>
-                <a href="/kontakt" className="btn-primary">
+                <ModalOpenButton className="btn-primary">
                   Jetzt Anfrage stellen →
-                </a>
+                </ModalOpenButton>
               </div>
             </div>
           </div>
@@ -542,9 +543,9 @@ export default function UeberUnsPage() {
                   flexWrap: "wrap",
                 }}
               >
-                <a href="/kontakt" className="btn-primary">
+                <ModalOpenButton className="btn-primary">
                   Leasinganfrage stellen →
-                </a>
+                </ModalOpenButton>
                 <a
                   href="tel:+4903331297792"
                   style={{
