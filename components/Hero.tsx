@@ -2,6 +2,7 @@
 import { useRef, useEffect } from "react";
 import Image from "next/image";
 import Counter from "./Counter";
+import { useContactModal } from "@/context/ContactModalContext";
 
 const checkItems = [
   "keine Schufa-Abfrage",
@@ -23,6 +24,7 @@ const CheckIcon = () => (
 
 export default function Hero() {
   const parallaxRef = useRef<HTMLDivElement>(null);
+  const { openModal } = useContactModal();
 
   useEffect(() => {
     // Disable on mobile — too slow & not needed on small screens
@@ -214,12 +216,12 @@ export default function Hero() {
                 marginBottom: "24px",
               }}
             >
-              <a href="/kontakt" className="btn-primary">
+              <button type="button" onClick={() => openModal()} className="btn-primary" style={{ border: "none", cursor: "pointer" }}>
                 <svg width="16" height="16" viewBox="0 0 256 512" fill="currentColor">
                   <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
                 </svg>
                 Jetzt Leasing starten
-              </a>
+              </button>
               <a href="tel:+4903331297792" className="btn-outline">
                 03331 – 29 77 92
               </a>
