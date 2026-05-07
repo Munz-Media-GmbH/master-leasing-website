@@ -6,8 +6,11 @@ const STORAGE_KEY = "ml_cookie_consent";
 type ConsentStatus = "accepted" | "declined";
 
 function updateGtmConsent(granted: boolean) {
-  if (typeof window !== "undefined" && typeof (window as Window & { gtag?: (...args: unknown[]) => void }).gtag === "function") {
-    (window as Window & { gtag: (...args: unknown[]) => void }).gtag("consent", "update", {
+  if (typeof window === "undefined") return;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const w = window as any;
+  if (typeof w.gtag === "function") {
+    w.gtag("consent", "update", {
       ad_storage: granted ? "granted" : "denied",
       analytics_storage: granted ? "granted" : "denied",
       ad_user_data: granted ? "granted" : "denied",
