@@ -148,6 +148,10 @@ export default function RootLayout({
         <ScrollRevealInit />
         {children}
         <CookieBanner />
+        <script
+          src="https://base.muenzmedia.de/api/track/mm.js?client=master-leasing"
+          defer
+        />
       </body>
     </html>
   );
