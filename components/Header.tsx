@@ -88,7 +88,7 @@ export default function Header() {
             className="btn-primary"
             style={{ fontSize: "14px", padding: "12px 24px" }}
           >
-            Leasinganfrage stellen
+            Anfrage stellen
           </a>
         </nav>
 
@@ -160,7 +160,7 @@ export default function Header() {
             className="btn-primary"
             style={{ marginTop: "20px", display: "inline-flex" }}
           >
-            Leasinganfrage stellen
+            Anfrage stellen
           </a>
         </div>
       )}

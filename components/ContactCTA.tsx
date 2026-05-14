@@ -61,7 +61,7 @@ export default function ContactCTA() {
           <div>
             <h2 style={{ marginBottom: "16px" }}>
               Kontaktieren Sie uns{" "}
-              <span style={{ color: "#E15C55" }}>für Ihre Leasinganfrage</span>
+              <span style={{ color: "#E15C55" }}>für Ihre Anfrage</span>
             </h2>
             <h4
               style={{
@@ -87,7 +87,7 @@ export default function ContactCTA() {
                 marginBottom: "32px",
               }}
             >
-              Jetzt Leasinganfrage stellen und Kontakt aufnehmen – Ihr Traumauto wartet auf
+              Jetzt Anfrage stellen und Kontakt aufnehmen – Ihr Traumauto wartet auf
               Sie!
             </p>
             <a href="https://master-leasing.com/kontakt/" className="btn-primary">

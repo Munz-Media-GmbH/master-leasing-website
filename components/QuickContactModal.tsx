@@ -208,7 +208,7 @@ function ContactModal({ onClose }: { onClose: () => void }) {
                 marginBottom: "8px",
               }}
             >
-              Leasinganfrage stellen
+              Anfrage stellen
             </h3>
             <p
               style={{

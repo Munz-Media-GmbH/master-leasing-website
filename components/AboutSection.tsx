@@ -25,14 +25,14 @@ export default function AboutSection() {
                 Das Besondere bei Master Leasing ist, dass wir Ihnen die Möglichkeit bieten, Auto Leasing ohne Schufa zu nutzen. Sie können Ihr Traumfahrzeug leasen, ganz ohne die typischen Einschränkungen durch die Schufa – diskret, schnell und unkompliziert.
               </p>
               <h3 style={{ fontFamily: "'Quantico', sans-serif", color: "#fff", fontSize: "18px", marginBottom: "12px" }}>
-                Leasinganfrage stellen: Der einfache Weg
+                Anfrage stellen: Der einfache Weg
               </h3>
               <p style={{ marginBottom: "32px" }}>
                 Egal, ob Opel, Mercedes, Hyundai oder Skoda – bei uns haben Sie die freie Händlerwahl. Master Leasing sorgt für eine schnelle Leasingzusage, oft bereits in 24 Stunden!
               </p>
               <a href="/kontakt" className="btn-primary">
                 <svg width="16" height="16" viewBox="0 0 256 512" fill="currentColor"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" /></svg>
-                Leasinganfrage stellen
+                Anfrage stellen
               </a>
             </div>
           </div>

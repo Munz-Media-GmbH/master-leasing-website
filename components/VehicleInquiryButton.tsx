@@ -262,7 +262,7 @@ function InquiryModal({
                 marginBottom: "24px",
               }}
             >
-              Leasinganfrage stellen
+              Anfrage stellen
             </h3>
 
             {/* Name fields */}

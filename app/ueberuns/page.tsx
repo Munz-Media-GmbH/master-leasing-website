@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Über uns – Master Leasing | Fair. Einfach. Seriös.",
   description:
-    "Master Leasing ist eine der größten bankenunabhängigen Leasinggesellschaften Deutschlands. Leasing ohne Schufa, ohne Bankprüfung – für Unternehmer, Selbstständige und Existenzgründer.",
+    "Master Leasing ist einer der größten bankenunabhängigen Leasingmakler Deutschlands. Leasing-Vermittlung ohne Schufa, ohne Bankprüfung – für Unternehmer, Selbstständige und Existenzgründer.",
   alternates: { canonical: "https://master-leasing.com/ueberuns/" },
   robots: "follow, index",
 };
@@ -40,7 +40,7 @@ const pillars = [
   },
   {
     word: "Seriös",
-    text: "Als eine der größten bankenunabhängigen Leasinggesellschaften Deutschlands stehen wir für Transparenz und Verlässlichkeit.",
+    text: "Als einer der größten bankenunabhängigen Leasingmakler Deutschlands stehen wir für Transparenz und Verlässlichkeit.",
   },
 ];
 
@@ -301,7 +301,7 @@ export default function UeberUnsPage() {
                     marginBottom: "20px",
                   }}
                 >
-                  Master Leasing ist eine der größten bankenunabhängigen Leasinggesellschaften
+                  Master Leasing ist einer der größten bankenunabhängigen Leasingmakler
                   Deutschlands. Seit über 20 Jahren vermitteln wir Leasing-Lösungen für
                   Unternehmer, Selbstständige und Existenzgründer – schnell, unkompliziert
                   und zu Top-Konditionen.
@@ -543,7 +543,7 @@ export default function UeberUnsPage() {
                 }}
               >
                 <a href="/kontakt" className="btn-primary">
-                  Leasinganfrage stellen →
+                  Anfrage stellen →
                 </a>
                 <a
                   href="tel:+4903331297792"
