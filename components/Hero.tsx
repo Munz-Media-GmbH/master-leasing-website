@@ -60,11 +60,11 @@ export default function Hero() {
       style={{
         position: "relative",
         height: "100vh",
-        minHeight: "600px",
+        minHeight: "640px",
         display: "flex",
-        alignItems: "flex-start",
-        paddingTop: "110px",
-        paddingBottom: "32px",
+        alignItems: "center",
+        paddingTop: "96px",
+        paddingBottom: "48px",
         overflow: "hidden",
       }}
     >
@@ -222,9 +222,6 @@ export default function Hero() {
                 </svg>
                 Jetzt Leasing starten
               </button>
-              <a href="tel:+4903331297792" className="btn-outline">
-                03331 – 29 77 92
-              </a>
             </div>
 
             {/* Stats */}

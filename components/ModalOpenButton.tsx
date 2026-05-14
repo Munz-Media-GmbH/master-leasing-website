@@ -14,7 +14,7 @@ export default function ModalOpenButton({ className, style, children }: Props) {
       type="button"
       onClick={() => openModal()}
       className={className}
-      style={{ border: "none", cursor: "pointer", background: "transparent", padding: 0, ...style }}
+      style={{ border: "none", cursor: "pointer", ...(className ? {} : { background: "transparent", padding: 0 }), ...style }}
     >
       {children}
     </button>

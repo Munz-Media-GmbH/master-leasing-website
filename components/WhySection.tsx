@@ -162,6 +162,16 @@ export default function WhySection() {
                 </svg>
                 Jetzt anfragen
               </ModalOpenButton>
+              <div style={{ display: "flex", gap: "20px", marginTop: "14px", flexWrap: "wrap" }}>
+                <span style={{ display: "flex", alignItems: "center", gap: "6px", color: "rgba(255,255,255,0.45)", fontSize: "13px", fontFamily: "'Inter', sans-serif" }}>
+                  <svg width="13" height="13" viewBox="0 0 512 512" fill="#E15C55"><path d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3z"/></svg>
+                  Keine Schufa-Prüfung
+                </span>
+                <span style={{ display: "flex", alignItems: "center", gap: "6px", color: "rgba(255,255,255,0.45)", fontSize: "13px", fontFamily: "'Inter', sans-serif" }}>
+                  <svg width="13" height="13" viewBox="0 0 576 512" fill="#E15C55"><path d="M0 432c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V256H0v176zm192-68c0-6.6 5.4-12 12-12h136c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-40zm-128 0c0-6.6 5.4-12 12-12h72c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM576 80v48H0V80C0 53.5 21.5 32 48 32h480c26.5 0 48 21.5 48 48z"/></svg>
+                  Kostenlos & unverbindlich
+                </span>
+              </div>
             </div>
           </div>
         </div>

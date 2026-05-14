@@ -368,13 +368,15 @@ export default function VehiclesSection({ vehicles: _vehicles }: { vehicles?: an
                   className={`vehicle-card scroll-up${stagger} vehicle-card-link`}
                   style={{ textDecoration: "none", display: "block" }}
                 >
-                  <Image
-                    src={v.img}
-                    alt={v.title}
-                    width={593}
-                    height={328}
-                    style={{ width: "100%", height: "200px", objectFit: "cover" }}
-                  />
+                  <div style={{ position: "relative", aspectRatio: "4/3", width: "100%", overflow: "hidden" }}>
+                    <Image
+                      src={v.img}
+                      alt={v.title}
+                      fill
+                      style={{ objectFit: "cover" }}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
                   <div className="vehicle-card-body">
                     <h3 style={{ marginBottom: "4px", color: "#fff" }}>{v.title}</h3>
                     <p

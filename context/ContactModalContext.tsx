@@ -38,6 +38,16 @@ export function ContactModalProvider({ children }: { children: ReactNode }) {
   const openModal = useCallback((config?: { initialData?: Partial<ModalFormData> }) => {
     setInitialData(config?.initialData ?? {});
     setIsOpen(true);
+    // GTM / GA4 CTA tracking
+    if (typeof window !== "undefined") {
+      (window as Window & { dataLayer?: object[] }).dataLayer =
+        (window as Window & { dataLayer?: object[] }).dataLayer ?? [];
+      (window as Window & { dataLayer?: object[] }).dataLayer!.push({
+        event: "cta_click",
+        cta_type: "contact_modal",
+        page_path: window.location.pathname,
+      });
+    }
   }, []);
 
   const closeModal = useCallback(() => {

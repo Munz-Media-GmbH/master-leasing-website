@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import BrandsCarousel from "@/components/BrandsCarousel";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
-import CTABanner from "@/components/CTABanner";
 import WasWirLeasenSection from "@/components/WasWirLeasenSection";
 import WhySection from "@/components/WhySection";
 import Testimonials from "@/components/Testimonials";
@@ -26,14 +25,12 @@ export default async function Home() {
         <AboutSection />
         <ServicesSection />
         <WasWirLeasenSection overline="Was wir für Sie leasen" />
-        <CTABanner />
         <WhySection />
         <Testimonials />
         <VehiclesSection vehicles={vehicles} />
-        <SaleLeaseBack />
-        <ContactCTA />
+        <SaleLeaseBack hideFaq hideProcess hideOverview hideCases />
         <FAQSection />
-        <CTABanner />
+        <ContactCTA />
       </main>
       <Footer />
     </>

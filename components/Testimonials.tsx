@@ -21,7 +21,7 @@ const testimonials = [
     job: "",
   },
   {
-    stars: 4.5,
+    stars: 5,
     text: '"Mein Leasingantrag war doppelt so schnell durch wie gedacht. Alles lief reibungslos – absolut empfehlenswert."',
     name: "Lena Martins",
     job: "Fahrerin eines Honda Civic",

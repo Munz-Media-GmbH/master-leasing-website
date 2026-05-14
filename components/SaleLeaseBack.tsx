@@ -1,5 +1,5 @@
 import ModalOpenButton from "@/components/ModalOpenButton";
-export default function SaleLeaseBack() {
+export default function SaleLeaseBack({ hideFaq, hideProcess, hideOverview, hideCases }: { hideFaq?: boolean; hideProcess?: boolean; hideOverview?: boolean; hideCases?: boolean } = {}) {
   const benefits = [
     {
       icon: (
@@ -322,6 +322,7 @@ export default function SaleLeaseBack() {
       </section>
 
       {/* ── Sektion 3: Übersichtstabelle ── */}
+      {!hideOverview && (
       <section
         className="section-pad"
         style={{
@@ -504,8 +505,10 @@ export default function SaleLeaseBack() {
           </div>
         </div>
       </section>
+      )}
 
       {/* ── Sektion 4: Prozess / Timeline ── */}
+      {!hideProcess && (
       <section
         className="section-pad"
         style={{
@@ -547,19 +550,23 @@ export default function SaleLeaseBack() {
             {processSteps.map((step, i) => (
               <div
                 key={step.number}
-                className={`scroll-up${i > 0 ? ` scroll-d${Math.min(i, 3)}` : ""}`}
+                className={`slb-step scroll-up${i > 0 ? ` scroll-d${Math.min(i, 3)}` : ""}`}
                 style={{
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
                   textAlign: "center",
-                  padding: "0 20px",
+                  padding: "24px 20px",
                   position: "relative",
                   zIndex: 1,
+                  borderRadius: "16px",
+                  transition: "background 0.25s, transform 0.25s",
+                  cursor: "default",
                 }}
               >
                 {/* Step number circle */}
                 <div
+                  className="slb-step-circle"
                   style={{
                     width: "56px",
                     height: "56px",
@@ -575,6 +582,7 @@ export default function SaleLeaseBack() {
                     color: "#fff",
                     marginBottom: "24px",
                     flexShrink: 0,
+                    transition: "background 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s",
                   }}
                 >
                   {step.number}
@@ -628,11 +636,23 @@ export default function SaleLeaseBack() {
               </svg>
               Unverbindlich anfragen
             </ModalOpenButton>
+            <div style={{ display: "flex", gap: "20px", marginTop: "14px", justifyContent: "center", flexWrap: "wrap" }}>
+              <span style={{ display: "flex", alignItems: "center", gap: "6px", color: "rgba(255,255,255,0.45)", fontSize: "13px", fontFamily: "'Inter', sans-serif" }}>
+                <svg width="13" height="13" viewBox="0 0 512 512" fill="#E15C55"><path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.5 33.3-6.5s4.5-25.9-6.5-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+                Schnelle Bearbeitung
+              </span>
+              <span style={{ display: "flex", alignItems: "center", gap: "6px", color: "rgba(255,255,255,0.45)", fontSize: "13px", fontFamily: "'Inter', sans-serif" }}>
+                <svg width="13" height="13" viewBox="0 0 512 512" fill="#E15C55"><path d="M256 448c141.4 0 256-93.1 256-208S397.4 32 256 32S0 125.1 0 240c0 45.1 17.7 86.8 47.7 120.9c-1.9 24.5-11.4 46.3-21.4 62.9c-5.5 9.2-11.1 16.6-15.2 21.6c-2.1 2.5-3.7 4.4-4.9 5.7c-.6 .6-1 1.1-1.3 1.4l-.3 .3c0 0 0 0 0 0c0 0 0 0 0 0s0 0 0 0s0 0 0 0c-4.6 4.6-5.9 11.4-3.4 17.4c2.5 6 8.3 9.9 14.8 9.9c28.7 0 57.6-8.9 81.6-19.3c22.9-10 42.4-21.9 54.3-30.6c31.8 11.5 67 17.9 104.1 17.9z"/></svg>
+                Persönlicher Ansprechpartner
+              </span>
+            </div>
           </div>
         </div>
       </section>
+      )}
 
       {/* ── Sektion 5: Use Cases 2x2 ── */}
+      {!hideCases && (
       <section
         className="section-pad"
         style={{
@@ -713,8 +733,10 @@ export default function SaleLeaseBack() {
           </div>
         </div>
       </section>
+      )}
 
       {/* ── Sektion 6: FAQ ── */}
+      {!hideFaq && (
       <section
         className="section-pad"
         style={{
@@ -793,6 +815,7 @@ export default function SaleLeaseBack() {
           </div>
         </div>
       </section>
+      )}
 
       <style>{`
         @media (max-width: 1024px) {
@@ -815,6 +838,16 @@ export default function SaleLeaseBack() {
           transition: transform 0.2s ease;
         }
         details summary::-webkit-details-marker { display: none; }
+        .slb-step:hover {
+          background: rgba(225,92,85,0.06);
+          transform: translateY(-4px);
+        }
+        .slb-step:hover .slb-step-circle {
+          background: #E15C55 !important;
+          border-color: #E15C55 !important;
+          box-shadow: 0 0 24px rgba(225,92,85,0.4);
+          transform: scale(1.1);
+        }
       `}</style>
     </>
   );

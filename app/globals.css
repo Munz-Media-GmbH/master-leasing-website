@@ -264,9 +264,9 @@ a {
   display: inline-block;
   margin-bottom: 12px;
   background: rgba(225,92,85,0.1);
-  border: 1px solid rgba(225,92,85,0.25);
   border-radius: 999px;
   padding: 4px 14px;
+  text-decoration: none;
 }
 
 /* Icon box */

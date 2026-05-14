@@ -35,6 +35,16 @@ export default function AboutSection() {
                 <svg width="16" height="16" viewBox="0 0 256 512" fill="currentColor"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" /></svg>
                 Leasinganfrage stellen
               </ModalOpenButton>
+              <div style={{ display: "flex", gap: "20px", marginTop: "14px", flexWrap: "wrap" }}>
+                <span style={{ display: "flex", alignItems: "center", gap: "6px", color: "rgba(255,255,255,0.45)", fontSize: "13px", fontFamily: "'Inter', sans-serif" }}>
+                  <svg width="13" height="13" viewBox="0 0 512 512" fill="#E15C55"><path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256 256-114.6 256-256S397.4 0 256 0zm0 464c-114.7 0-208-93.31-208-208S141.3 48 256 48s208 93.31 208 208-93.3 208-208 208zm114.7-167.3c-5.3 5.3-12.2 7.9-19.1 7.9s-13.8-2.6-19.1-7.9l-58.5-58.5V112c0-14.9-12.1-27-27-27s-27 12.1-27 27v144c0 7.2 2.9 14 8 19.1l66.5 66.5c10.6 10.5 27.6 10.5 38.2-.1 10.5-10.6 10.5-27.6-.1-38.2l.1.4z"/></svg>
+                  Antwort in 24h
+                </span>
+                <span style={{ display: "flex", alignItems: "center", gap: "6px", color: "rgba(255,255,255,0.45)", fontSize: "13px", fontFamily: "'Inter', sans-serif" }}>
+                  <svg width="13" height="13" viewBox="0 0 512 512" fill="#E15C55"><path d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3z"/></svg>
+                  Keine Schufa-Prüfung
+                </span>
+              </div>
             </div>
           </div>
         </div>

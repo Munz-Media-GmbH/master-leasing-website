@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import ScrollRevealInit from "@/components/ScrollRevealInit";
-import CookieBanner from "@/components/CookieBanner";
 import { ContactModalProvider } from "@/context/ContactModalContext";
 import ContactFunnelModal from "@/components/ContactFunnelModal";
 
@@ -150,13 +149,18 @@ export default function RootLayout({
         <ContactModalProvider>
           <ScrollRevealInit />
           {children}
-          <CookieBanner />
           <ContactFunnelModal />
           <script
             src="https://base.muenzmedia.de/api/track/mm.js?client=master-leasing"
             defer
           />
         </ContactModalProvider>
+        {/* CCM19 Cookie Banner (E-recht24) */}
+        <Script
+          src="https://cloud.ccm19.de/app.js?apiKey=8b7a0d05c2a9eb071e7cd4b6ba3e25dadbde05ae174c0cec&domain=693bf22bee0419b23c048fb5"
+          strategy="afterInteractive"
+          referrerPolicy="origin"
+        />
       </body>
     </html>
   );

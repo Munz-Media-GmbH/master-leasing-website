@@ -328,7 +328,7 @@ const OBJEKT_TYPEN = [
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
-export default function SaleLeaseBackForm() {
+export default function SaleLeaseBackForm({ onClose }: { onClose?: () => void } = {}) {
   const [step, setStep] = useState(1);
   const [data, setData] = useState<SLBData>(INITIAL);
   const [loading, setLoading] = useState(false);
@@ -634,36 +634,108 @@ export default function SaleLeaseBackForm() {
     }
   };
 
-  // ── Layout ────────────────────────────────────────────────────────────────
-  return (
-    <>
-      <style>{`
-        @keyframes slb-spin { to { transform: rotate(360deg); } }
-        @media (max-width: 900px) {
-          .slb-layout { grid-template-columns: 1fr !important; }
-          .slb-sidebar { order: -1; }
-        }
-        @media (max-width: 540px) {
-          .slb-grid-2 { grid-template-columns: 1fr !important; }
-          .slb-contact-row { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
+  // ── Shared styles ─────────────────────────────────────────────────────────
+  const sharedStyles = `
+    @keyframes slb-spin { to { transform: rotate(360deg); } }
+    @keyframes slb-fade-in { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slb-slide-up { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 900px) {
+      .slb-layout { grid-template-columns: 1fr !important; }
+      .slb-sidebar { order: -1; }
+    }
+    @media (max-width: 540px) {
+      .slb-grid-2 { grid-template-columns: 1fr !important; }
+      .slb-contact-row { grid-template-columns: 1fr !important; }
+    }
+  `;
 
-      <section style={{ background: "#101010", paddingTop: "80px", paddingBottom: "100px" }}>
+  const innerContent = (
+    <div
+      className="container slb-layout"
+      style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "start" }}
+    >
+      {/* Form card */}
+      <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)", borderRadius: "20px", padding: "40px" }}>
+        {renderForm()}
+      </div>
+
+      {/* Sidebar */}
+      <div className="slb-sidebar">
+        <Sidebar />
+      </div>
+    </div>
+  );
+
+  // ── Modal Layout ───────────────────────────────────────────────────────────
+  if (onClose) {
+    return (
+      <>
+        <style>{sharedStyles}</style>
         <div
-          className="container slb-layout"
-          style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "start" }}
+          onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 9000,
+            background: "rgba(0,0,0,0.82)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "24px 16px",
+            animation: "slb-fade-in 0.25s ease",
+            overflowY: "auto",
+          }}
         >
-          {/* Form card */}
-          <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)", borderRadius: "20px", padding: "40px" }}>
-            {renderForm()}
-          </div>
-
-          {/* Sidebar */}
-          <div className="slb-sidebar">
-            <Sidebar />
+          <div
+            style={{
+              background: "#101010",
+              border: "1px solid rgba(255,255,255,0.1)",
+              borderRadius: "24px",
+              width: "100%",
+              maxWidth: "1100px",
+              position: "relative",
+              padding: "60px 60px 60px",
+              animation: "slb-slide-up 0.3s ease",
+              margin: "auto",
+            }}
+          >
+            {/* Close button */}
+            <button
+              type="button"
+              onClick={onClose}
+              style={{
+                position: "absolute",
+                top: "20px",
+                right: "20px",
+                width: "40px",
+                height: "40px",
+                border: "1px solid rgba(255,255,255,0.12)",
+                borderRadius: "50%",
+                background: "rgba(255,255,255,0.06)",
+                color: "rgba(255,255,255,0.6)",
+                fontSize: "20px",
+                lineHeight: 1,
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              ×
+            </button>
+            {innerContent}
           </div>
         </div>
+      </>
+    );
+  }
+
+  // ── Inline Layout ──────────────────────────────────────────────────────────
+  return (
+    <>
+      <style>{sharedStyles}</style>
+      <section style={{ background: "#101010", paddingTop: "80px", paddingBottom: "100px" }}>
+        {innerContent}
       </section>
     </>
   );
