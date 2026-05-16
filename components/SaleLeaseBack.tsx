@@ -399,10 +399,6 @@ export default function SaleLeaseBack({ hideFaq, hideProcess, hideOverview, hide
               <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
                 {[
                   "Fahrzeugwert liegt unter 10.000 €",
-                  "Private Nutzung ohne gewerblichen Bezug",
-                  "Kurzfristige Nutzung des Fahrzeugs geplant",
-                  "Fahrzeug soll zeitnah verkauft werden",
-                  "Leasingrate passt nicht zur Liquiditätsplanung",
                 ].map((item) => (
                   <div
                     key={item}

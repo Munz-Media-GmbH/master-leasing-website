@@ -4,10 +4,12 @@ import Image from "next/image";
 import SaleLeaseBackForm from "./SaleLeaseBackForm";
 
 const benefits = [
-  "Sofortige Liquidität freisetzen",
-  "Fahrzeug oder Maschine weiterhin voll nutzen",
-  "Keine Schufa-Prüfung erforderlich",
-  "Persönliche Beratung & schnelle Abwicklung",
+  "Keine SCHUFA-Abfrage – kein Eintrag",
+  "Keine Bankprüfung, keine BWA, keine Einkommensnachweise",
+  "Bewertung & Zusage in 24 Stunden",
+  "Keine Vor-Ort-Begutachtung – diskret & bankenunabhängig",
+  "Fahrzeug bleibt wie es ist – Nummernschild & Nutzung unverändert",
+  "20+ Jahre Erfahrung in unkomplizierter Leasingvermittlung",
 ];
 
 export default function SaleLeaseBackHero() {
@@ -63,8 +65,8 @@ export default function SaleLeaseBackHero() {
             <span className="overline">Sale &amp; Lease Back</span>
 
             <h1 style={{ color: "#fff", marginBottom: "20px", marginTop: "12px" }}>
-              Kapital freisetzen –{" "}
-              <span style={{ color: "#E15C55" }}>Fahrzeug behalten</span>
+              Fahrzeug-Beleihung für Gewerbekunden –{" "}
+              <span style={{ color: "#E15C55" }}>ohne Bank, ohne SCHUFA</span>
             </h1>
 
             <p
@@ -76,8 +78,9 @@ export default function SaleLeaseBackHero() {
                 maxWidth: "480px",
               }}
             >
-              Verkaufen Sie Ihr Fahrzeug oder Ihre Maschine an uns und leasen Sie es
-              direkt zurück. Sofortige Liquidität – weiterhin volle Nutzung.
+              Sie brauchen schnell Kapital und wollen Ihr Fahrzeug nicht verkaufen?
+              Beleihen Sie es einfach – Liquiditätsbestätigung in 24 Stunden,
+              ohne Bank, ohne SCHUFA.
             </p>
 
             {/* Benefit bullets */}
@@ -266,7 +269,7 @@ export default function SaleLeaseBackHero() {
                   lineHeight: 1.3,
                 }}
               >
-                Kapital freisetzen –<br />Fahrzeug behalten
+                Ohne Bank. Ohne SCHUFA.<br />Zusage in 24 Stunden.
               </p>
             </div>
           </div>

@@ -7,9 +7,9 @@ import SaleLeaseBackCTA from "@/components/SaleLeaseBackCTA";
 import SaleLeaseBackHero from "@/components/SaleLeaseBackHero";
 
 export const metadata: Metadata = {
-  title: "Sale & Lease Back – Kapital freisetzen | Master Leasing",
+  title: "Fahrzeug-Beleihung für Gewerbekunden – Ohne Bank, ohne SCHUFA | Master Leasing",
   description:
-    "Sale & Lease Back mit Master Leasing: Fahrzeug oder Maschine verkaufen und zurückleasen. Sofort Kapital freisetzen – ohne Schufa-Prüfung.",
+    "Fahrzeug beleihen statt verkaufen: Liquiditätsbestätigung in 24 Stunden – ohne Bankprüfung, ohne SCHUFA-Abfrage, ohne BWA. Diskret und bankenunabhängig.",
   alternates: { canonical: "https://master-leasing.com/sale-und-leaseback/" },
   robots: "follow, index",
 };
