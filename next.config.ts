@@ -53,6 +53,23 @@ const nextConfig: NextConfig = {
         destination: "/geraeteleasing",
         permanent: true,
       },
+      // Backlinks/Wunsch-URLs (Gregor mailt /sale-and-leaseback-2)
+      // → auf bestehenden deutschen Slug umleiten.
+      {
+        source: "/sale-and-leaseback-2",
+        destination: "/sale-und-leaseback",
+        permanent: true,
+      },
+      {
+        source: "/sale-and-leaseback",
+        destination: "/sale-und-leaseback",
+        permanent: true,
+      },
+      {
+        source: "/sale-and-leaseback/:path*",
+        destination: "/sale-und-leaseback",
+        permanent: true,
+      },
     ];
   },
 };

@@ -222,8 +222,8 @@ export default function ContactFunnelModal() {
       <StepTitle>Welches Fahrzeug / Objekt möchten Sie leasen?</StepTitle>
       <InputField label="Marke / Leasingobjekt" value={data.marke} onChange={set("marke")} placeholder="z.B. BMW, Mercedes, Fendt…" required />
       <InputField label="Modell" value={data.modell} onChange={set("modell")} placeholder="z.B. 3er, C-Klasse, 724…" />
-      <InputField label="Baujahr" value={data.baujahr} onChange={set("baujahr")} placeholder="z.B. 2020" />
-      <NavButtons onBack={() => setStep(1)} onNext={() => setStep(3)} nextDisabled={!data.marke} />
+      <InputField label="Baujahr" value={data.baujahr} onChange={set("baujahr")} placeholder="z.B. 2020" required />
+      <NavButtons onBack={() => setStep(1)} onNext={() => setStep(3)} nextDisabled={!data.marke || !data.baujahr} />
       <TrustBar />
     </>
   );
@@ -233,9 +233,9 @@ export default function ContactFunnelModal() {
     <>
       <ProgressBar step={3} total={5} />
       <StepTitle>Kilometerstand & Wert des Objekts</StepTitle>
-      <InputField label="Kilometerstand / Betriebsstunden" value={data.kilometerstand} onChange={set("kilometerstand")} placeholder="z.B. 45.000 km" />
+      <InputField label="Kilometerstand / Betriebsstunden" value={data.kilometerstand} onChange={set("kilometerstand")} placeholder="z.B. 45.000 km" required />
       <InputField label="Preis inkl. MwSt. (€)" value={data.preis} onChange={set("preis")} placeholder="z.B. 35.000" required />
-      <NavButtons onBack={() => setStep(2)} onNext={() => setStep(4)} nextDisabled={!data.preis} />
+      <NavButtons onBack={() => setStep(2)} onNext={() => setStep(4)} nextDisabled={!data.preis || !data.kilometerstand} />
       <TrustBar />
     </>
   );

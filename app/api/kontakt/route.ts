@@ -32,6 +32,7 @@ export async function POST(req: NextRequest) {
       plz,
       stadt,
       nachricht,
+      agb,
     } = body;
 
     if (!vorname || !nachname || !email) {
@@ -62,6 +63,7 @@ export async function POST(req: NextRequest) {
       plz,
       stadt,
       nachricht,
+      agb: Boolean(agb),
       datum,
     };
 
