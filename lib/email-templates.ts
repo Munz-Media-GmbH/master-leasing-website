@@ -100,6 +100,7 @@ export interface KontaktData {
   kilometerstand?: string;
   preis?: string;
   nachricht?: string;
+  agb?: boolean;
   datum: string;
 }
 
@@ -155,6 +156,11 @@ export function kontaktTeamMail(d: KontaktData): string {
       ${d.nachricht ? `
       <h3 style="margin:20px 0 10px;color:${DUNKEL};font-size:14px;text-transform:uppercase;letter-spacing:0.06em;">Nachricht</h3>
       ${quoteBlock(d.nachricht)}` : ""}
+
+      <h3 style="margin:20px 0 10px;color:${DUNKEL};font-size:14px;text-transform:uppercase;letter-spacing:0.06em;">Einwilligung</h3>
+      <p style="margin:0 0 16px;color:${TEXT};font-size:14px;">
+        ${d.agb ? "✅ AGB &amp; Datenschutz akzeptiert" : "⚠️ AGB nicht bestätigt"}
+      </p>
 
       ${timestamp(d.datum)}
     </td></tr>
