@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import { trackEvent } from "@/app/hooks/useTracking";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -618,6 +619,11 @@ export default function ContactForm() {
         body: JSON.stringify(data),
       });
       if (!res.ok) throw new Error("Fehler beim Senden");
+      trackEvent("form_submit", undefined, {
+        form: "kontakt_page",
+        fahrzeugtyp: data.fahrzeugtyp,
+        marke: data.marke,
+      });
       setStep(5);
     } catch {
       setError(

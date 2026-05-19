@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import { trackEvent } from "@/app/hooks/useTracking";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -400,6 +401,12 @@ export default function SaleLeaseBackForm({ onClose }: { onClose?: () => void } 
         body: JSON.stringify(data),
       });
       if (!res.ok) throw new Error("Fehler");
+      trackEvent("form_submit", undefined, {
+        form: "slb_form",
+        qualified: !isDisqualified(data) ? "true" : "false",
+        objektTyp: data.objektTyp,
+        wert: data.wert,
+      });
       setStep(isDisqualified(data) ? 10 : 9);
     } catch {
       setError("Es gab einen Fehler. Bitte versuchen Sie es erneut oder rufen Sie uns direkt an.");
