@@ -11,10 +11,10 @@ import SaleLeaseBack from "@/components/SaleLeaseBack";
 import ContactCTA from "@/components/ContactCTA";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
-import { getVehicles } from "@/lib/sanity";
+import { getVehiclesForListing } from "@/lib/sanity";
 
 export default async function Home() {
-  const vehicles = await getVehicles();
+  const vehicles = await getVehiclesForListing();
 
   return (
     <>
