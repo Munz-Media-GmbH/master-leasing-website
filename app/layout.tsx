@@ -5,6 +5,7 @@ import "./globals.css";
 import ScrollRevealInit from "@/components/ScrollRevealInit";
 import { ContactModalProvider } from "@/context/ContactModalContext";
 import ContactFunnelModal from "@/components/ContactFunnelModal";
+import StickyMobileBar from "@/components/StickyMobileBar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -150,6 +151,7 @@ export default function RootLayout({
           <ScrollRevealInit />
           {children}
           <ContactFunnelModal />
+          <StickyMobileBar />
           <script
             src="https://base.muenzmedia.de/api/track/mm.js?client=master-leasing"
             defer
