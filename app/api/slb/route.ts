@@ -90,6 +90,39 @@ export async function POST(req: NextRequest) {
       }
     });
 
+    // Zentrales Tracking → Münz Media Lead-Portal (server-to-server, kein CORS)
+    try {
+      await fetch("https://base.muenzmedia.de/api/track", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          client_id: "master-leasing",
+          type: "lead",
+          data: {
+            name: `${vorname} ${nachname}`.trim(),
+            email,
+            phone: mobil || "",
+            company: unternehmen || "",
+            source: "/sale-und-leaseback",
+            form_id: "sale_and_leaseback",
+            data: {
+              status: statusLabel,
+              fuerWen: Array.isArray(fuerWen) ? fuerWen.join(", ") : (fuerWen || ""),
+              objektTyp: objektTyp || "",
+              wert: wert || "",
+              gewerblich: gewerblich || "",
+              hauptgrund: hauptgrund || "",
+              zeitrahmen: zeitrahmen || "",
+              zusatzInfo: zusatzInfo || "",
+            },
+          },
+        }),
+      });
+    } catch (trackErr) {
+      // Tracking darf nie den Submit blockieren
+      console.error("[SLB API] Lead-Tracking fehlgeschlagen:", trackErr);
+    }
+
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error("[SLB API] Error:", err);

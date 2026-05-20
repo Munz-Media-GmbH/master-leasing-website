@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { useContactModal, ModalFormData } from "@/context/ContactModalContext";
+import { trackEvent } from "@/app/hooks/useTracking";
 
 const INITIAL: ModalFormData = {
   fahrzeugtyp: "",
@@ -175,6 +176,11 @@ export default function ContactFunnelModal() {
         body: JSON.stringify(data),
       });
       if (!res.ok) throw new Error("Fehler beim Senden");
+      trackEvent("form_submit", undefined, {
+        form: "kontakt_modal",
+        fahrzeugtyp: data.fahrzeugtyp,
+        marke: data.marke,
+      });
       setStep(6);
     } catch {
       setError("Es gab einen Fehler beim Senden. Bitte versuchen Sie es erneut oder rufen Sie uns an.");

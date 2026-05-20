@@ -96,6 +96,40 @@ export async function POST(req: NextRequest) {
       }
     });
 
+    // Zentrales Tracking → Münz Media Lead-Portal (server-to-server, kein CORS)
+    try {
+      await fetch("https://base.muenzmedia.de/api/track", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          client_id: "master-leasing",
+          type: "lead",
+          data: {
+            name: `${vorname} ${nachname}`.trim(),
+            email,
+            phone: telefon || "",
+            company: unternehmen || "",
+            source: "/kontakt",
+            form_id: "kontaktformular",
+            data: {
+              fahrzeugtyp: fahrzeugLabel,
+              marke: marke || "",
+              modell: modell || "",
+              baujahr: baujahr || "",
+              kilometerstand: kilometerstand || "",
+              preis: preis || "",
+              nachricht: nachricht || "",
+              agb: data.agb ? "akzeptiert" : "nicht bestätigt",
+              adresse: [strasse, plz, stadt, land].filter(Boolean).join(", "),
+            },
+          },
+        }),
+      });
+    } catch (trackErr) {
+      // Tracking darf nie den Submit blockieren
+      console.error("[Kontakt API] Lead-Tracking fehlgeschlagen:", trackErr);
+    }
+
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error("[Kontakt API] Error:", err);

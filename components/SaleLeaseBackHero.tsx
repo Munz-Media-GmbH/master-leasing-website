@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import SaleLeaseBackForm from "./SaleLeaseBackForm";
+import { trackEvent } from "@/app/hooks/useTracking";
 
 const benefits = [
   "Sofortige Liquidität freisetzen",
@@ -125,6 +126,7 @@ export default function SaleLeaseBackHero() {
                 type="button"
                 onClick={() => {
                   setOpen(true);
+                  trackEvent("cta_click", undefined, { cta_type: "slb_form" });
                   if (typeof window !== "undefined") {
                     (window as Window & { dataLayer?: object[] }).dataLayer =
                       (window as Window & { dataLayer?: object[] }).dataLayer ?? [];
