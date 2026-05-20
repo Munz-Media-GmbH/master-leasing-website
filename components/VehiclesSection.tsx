@@ -3,83 +3,10 @@ import { useState, useMemo } from "react";
 import Image from "next/image";
 import { Lightning, GasCan, Palette, Wrench } from "@phosphor-icons/react";
 import { useContactModal } from "@/context/ContactModalContext";
+import type { VehicleListItem } from "@/lib/sanity";
 
-// ─── Static vehicle data with filter fields ──────────────────────────────────────────────
-
-const staticVehicles = [
-  {
-    id: "caddy-cargo",
-    slug: "vw-caddy-cargo-maxi-20-tdi",
-    img: "/images/IMG_0128.jpeg",
-    title: "VW Caddy Cargo Maxi 2.0TDI",
-    subtitel: "BEH-FRTSCHB · TEMPO · LED",
-    typ: "nutzfahrzeug",
-    motor: "diesel",
-    leistung: 122,
-    verbrauch: "6,2",
-    farbe: "Weiß",
-  },
-  {
-    id: "polo-life",
-    slug: "vw-polo-10-tsi-life",
-    img: "/images/IMG_0120.jpeg",
-    title: "VW Polo 1.0TSI Life",
-    subtitel: "LED · VIRTUAL · NAVI · PARKLENK",
-    typ: "pkw",
-    motor: "benzin",
-    leistung: 95,
-    verbrauch: "5,8",
-    farbe: "Grau",
-  },
-  {
-    id: "taigo-goal",
-    slug: "vw-taigo-10-tsi-goal",
-    img: "/images/IMG_0114.jpeg",
-    title: "VW Taigo 1.0 TSI Goal",
-    subtitel: "PDC · 3-2",
-    typ: "pkw",
-    motor: "benzin",
-    leistung: 110,
-    verbrauch: "6,0",
-    farbe: "Blau",
-  },
-  {
-    id: "crafter-kasten",
-    slug: "vw-crafter-35-kasten-hd-lang-20-tdi",
-    img: "/images/IMG_0138.jpeg",
-    title: "VW Crafter 35 Kasten HD Lang 2.0TDI",
-    subtitel: "LR · 3-Sitzer · APP-CONNECT",
-    typ: "lkw",
-    motor: "diesel",
-    leistung: 140,
-    verbrauch: "8,5",
-    farbe: "Weiß",
-  },
-  {
-    id: "t7-transporter",
-    slug: "vw-t7-transporter-kasten-20-tdi",
-    img: "/images/IMG_0148.jpeg",
-    title: "VW T7 Transporter Kasten 2.0 TDI",
-    subtitel: "LR · ACC · LED · KLIMA · LANG",
-    typ: "nutzfahrzeug",
-    motor: "diesel",
-    leistung: 150,
-    verbrauch: "7,8",
-    farbe: "Silber",
-  },
-  {
-    id: "golf-variant",
-    slug: "vw-golf-viii-variant-10tsi-life",
-    img: "/images/IMG_0158.jpeg",
-    title: "VW Golf VIII Variant 1.0TSI Life",
-    subtitel: "LED · ACC · NAVI · APP-CONN",
-    typ: "pkw",
-    motor: "benzin",
-    leistung: 110,
-    verbrauch: "5,9",
-    farbe: "Schwarz",
-  },
-];
+// Vehicles werden über Sanity gepflegt — keine hardcoded Daten mehr.
+// Pflege via Sanity-Studio: https://master-leasing.com/studio/
 
 // ─── Filter config ─────────────────────────────────────────────────────────────────────────────
 
@@ -209,8 +136,11 @@ function SpecBadge({ icon, value }: { icon: React.ReactNode; value: string }) {
 
 // ─── Main component ──────────────────────────────────────────────────────────────────────────────
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function VehiclesSection({ vehicles: _vehicles }: { vehicles?: any[] }) {
+export default function VehiclesSection({
+  vehicles = [],
+}: {
+  vehicles?: VehicleListItem[];
+}) {
   const [activeTyp, setActiveTyp] = useState("alle");
   const [activeMotor, setActiveMotor] = useState("alle");
   const [activeFarbe, setActiveFarbe] = useState("alle");
@@ -219,24 +149,24 @@ export default function VehiclesSection({ vehicles: _vehicles }: { vehicles?: an
 
   // ── Dynamisch: nur Optionen anzeigen, die wirklich vorkommen ──
   const availableTypen = useMemo(() => {
-    const found = new Set(staticVehicles.map((v) => v.typ));
+    const found = new Set(vehicles.map((v) => v.typ));
     return TYPEN.filter((t) => t.id === "alle" || found.has(t.id));
-  }, []);
+  }, [vehicles]);
 
   const availableMotoren = useMemo(() => {
-    const found = new Set(staticVehicles.map((v) => v.motor));
+    const found = new Set(vehicles.map((v) => v.motor));
     return MOTOREN.filter((m) => m.id === "alle" || found.has(m.id));
-  }, []);
+  }, [vehicles]);
 
   const availableFarben = useMemo(() => {
-    const found = new Set(staticVehicles.map((v) => v.farbe));
+    const found = new Set(vehicles.map((v) => v.farbe));
     return FARBEN.filter((f) => f.id === "alle" || found.has(f.id));
-  }, []);
+  }, [vehicles]);
 
   const availableLeistung = useMemo(() => {
     return LEISTUNG.filter((l) => {
       if (l.id === "alle") return true;
-      return staticVehicles.some((v) => {
+      return vehicles.some((v) => {
         const ps = v.leistung;
         if (l.id === "bis80") return ps < 80;
         if (l.id === "80bis120") return ps >= 80 && ps < 120;
@@ -246,10 +176,10 @@ export default function VehiclesSection({ vehicles: _vehicles }: { vehicles?: an
         return false;
       });
     });
-  }, []);
+  }, [vehicles]);
 
   const filtered = useMemo(() => {
-    return staticVehicles.filter((v) => {
+    return vehicles.filter((v) => {
       if (activeTyp !== "alle" && v.typ !== activeTyp) return false;
       if (activeMotor !== "alle" && v.motor !== activeMotor) return false;
       if (activeFarbe !== "alle" && v.farbe !== activeFarbe) return false;
@@ -263,7 +193,7 @@ export default function VehiclesSection({ vehicles: _vehicles }: { vehicles?: an
       }
       return true;
     });
-  }, [activeTyp, activeMotor, activeFarbe, activeLeistung]);
+  }, [vehicles, activeTyp, activeMotor, activeFarbe, activeLeistung]);
 
   const filtersActive =
     activeTyp !== "alle" || activeMotor !== "alle" || activeFarbe !== "alle" || activeLeistung !== "alle";
@@ -339,7 +269,35 @@ export default function VehiclesSection({ vehicles: _vehicles }: { vehicles?: an
         </div>
 
         {/* ── Vehicle grid ── */}
-        {filtered.length === 0 ? (
+        {vehicles.length === 0 ? (
+          <div
+            style={{
+              textAlign: "center",
+              padding: "60px 20px",
+              color: "rgba(255,255,255,0.5)",
+              fontFamily: "'Inter', sans-serif",
+              background: "rgba(255,255,255,0.02)",
+              border: "1px dashed rgba(255,255,255,0.1)",
+              borderRadius: "16px",
+            }}
+          >
+            <p style={{ fontSize: "18px", marginBottom: "8px", color: "#fff", fontFamily: "'Quantico', sans-serif" }}>
+              Aktuell keine Bestandsfahrzeuge gelistet
+            </p>
+            <p style={{ fontSize: "14px", marginBottom: "20px", maxWidth: "480px", margin: "0 auto 20px" }}>
+              Sie haben freie Händlerwahl — nennen Sie uns Ihr Wunschfahrzeug und wir beschaffen es.
+              Zusage innerhalb von 24 Stunden, ohne Schufa-Prüfung.
+            </p>
+            <button
+              type="button"
+              onClick={() => openModal()}
+              className="btn-primary"
+              style={{ border: "none", cursor: "pointer" }}
+            >
+              Wunschfahrzeug anfragen →
+            </button>
+          </div>
+        ) : filtered.length === 0 ? (
           <div
             style={{
               textAlign: "center",
@@ -364,18 +322,20 @@ export default function VehiclesSection({ vehicles: _vehicles }: { vehicles?: an
               return (
                 <a
                   key={v.id}
-                  href={`/fahrzeuge/${v.slug}`}
+                  href={`/fahrzeuge/${v.slug}/`}
                   className={`vehicle-card scroll-up${stagger} vehicle-card-link`}
                   style={{ textDecoration: "none", display: "block" }}
                 >
-                  <div style={{ position: "relative", aspectRatio: "4/3", width: "100%", overflow: "hidden" }}>
-                    <Image
-                      src={v.img}
-                      alt={v.title}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
+                  <div style={{ position: "relative", aspectRatio: "4/3", width: "100%", overflow: "hidden", background: "rgba(255,255,255,0.04)" }}>
+                    {v.imageUrl ? (
+                      <Image
+                        src={v.imageUrl}
+                        alt={v.title}
+                        fill
+                        style={{ objectFit: "cover" }}
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    ) : null}
                   </div>
                   <div className="vehicle-card-body">
                     <h3 style={{ marginBottom: "4px", color: "#fff" }}>{v.title}</h3>
@@ -389,7 +349,7 @@ export default function VehiclesSection({ vehicles: _vehicles }: { vehicles?: an
                     >
                       {v.subtitel}
                     </p>
-                    {/* Spec badges */}
+                    {/* Spec badges — nur Felder mit echten Werten anzeigen */}
                     <div
                       style={{
                         display: "flex",
@@ -398,13 +358,30 @@ export default function VehiclesSection({ vehicles: _vehicles }: { vehicles?: an
                         marginBottom: "16px",
                       }}
                     >
-                      <SpecBadge icon={<Lightning size={12} weight="fill" />} value={`${v.leistung} PS`} />
-                      <SpecBadge icon={<GasCan size={12} weight="fill" />} value={`${v.verbrauch} l/100km`} />
-                      <SpecBadge icon={<Palette size={12} weight="fill" />} value={v.farbe} />
-                      <SpecBadge
-                        icon={<Wrench size={12} weight="fill" />}
-                        value={v.motor.charAt(0).toUpperCase() + v.motor.slice(1)}
-                      />
+                      {v.leistung > 0 && (
+                        <SpecBadge
+                          icon={<Lightning size={12} weight="fill" />}
+                          value={`${v.leistung} PS`}
+                        />
+                      )}
+                      {v.verbrauch && v.verbrauch !== "—" && (
+                        <SpecBadge
+                          icon={<GasCan size={12} weight="fill" />}
+                          value={`${v.verbrauch} l/100km`}
+                        />
+                      )}
+                      {v.farbe && v.farbe !== "—" && (
+                        <SpecBadge
+                          icon={<Palette size={12} weight="fill" />}
+                          value={v.farbe}
+                        />
+                      )}
+                      {v.motor && (
+                        <SpecBadge
+                          icon={<Wrench size={12} weight="fill" />}
+                          value={v.motor.charAt(0).toUpperCase() + v.motor.slice(1)}
+                        />
+                      )}
                     </div>
                     {/* Subtle text link */}
                     <div style={{

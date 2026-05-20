@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import VehiclesSection from "@/components/VehiclesSection";
 import CTABanner from "@/components/CTABanner";
-import { getVehicles } from "@/lib/sanity";
+import { getVehiclesForListing } from "@/lib/sanity";
 
 export const metadata: Metadata = {
   title: "Fahrzeuge – Master Leasing",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default async function FahrzeugePage() {
-  const vehicles = await getVehicles();
+  const vehicles = await getVehiclesForListing();
 
   return (
     <>
