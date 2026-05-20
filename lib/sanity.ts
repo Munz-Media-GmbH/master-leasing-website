@@ -33,16 +33,42 @@ export interface SanityVehicle {
   slug: { current: string };
   image: SanityImageSource;
   images?: SanityImageSource[];
+  subtitel?: string;
   monthlyRate?: number;
   description?: string;
   specs?: { label: string; value: string }[];
   href?: string;
   isActive: boolean;
   order: number;
+  // Filter-Felder (Listing)
+  typ?: string;
+  motor?: string;
+  leistung?: number;
+  verbrauch?: string;
+  farbe?: string;
 }
 
-const VEHICLE_LIST_FIELDS = `_id, title, slug, image, monthlyRate, href, isActive, order`;
-const VEHICLE_DETAIL_FIELDS = `_id, title, slug, image, images, monthlyRate, description, specs, href, isActive, order`;
+/**
+ * Bereits aufgelöste Variante für Client-Listings —
+ * Bild-URL ist string statt SanityImageSource, damit das Sanity-SDK
+ * nicht ins Client-Bundle gezogen wird.
+ */
+export interface VehicleListItem {
+  id: string;
+  slug: string;
+  title: string;
+  subtitel: string;
+  imageUrl: string;
+  typ: string;
+  motor: string;
+  leistung: number;
+  verbrauch: string;
+  farbe: string;
+  monthlyRate?: number;
+}
+
+const VEHICLE_LIST_FIELDS = `_id, title, slug, image, subtitel, monthlyRate, href, isActive, order, typ, motor, leistung, verbrauch, farbe`;
+const VEHICLE_DETAIL_FIELDS = `_id, title, slug, image, images, subtitel, monthlyRate, description, specs, href, isActive, order, typ, motor, leistung, verbrauch, farbe`;
 
 export async function getVehicles(): Promise<SanityVehicle[]> {
   if (!client) return [];
@@ -53,6 +79,31 @@ export async function getVehicles(): Promise<SanityVehicle[]> {
   } catch {
     return [];
   }
+}
+
+/**
+ * Liefert Fahrzeuge fürs Listing — Bild-URL vorab aufgelöst,
+ * Filter-Felder mit sicheren Defaults.
+ */
+export async function getVehiclesForListing(): Promise<VehicleListItem[]> {
+  const raw = await getVehicles();
+  return raw
+    .filter((v) => v.slug?.current)
+    .map((v) => ({
+      id: v._id,
+      slug: v.slug.current,
+      title: v.title ?? "Fahrzeug",
+      subtitel: v.subtitel ?? "",
+      imageUrl: v.image
+        ? urlFor(v.image).width(800).height(600).fit("crop").url()
+        : "",
+      typ: v.typ ?? "pkw",
+      motor: v.motor ?? "benzin",
+      leistung: typeof v.leistung === "number" ? v.leistung : 0,
+      verbrauch: v.verbrauch ?? "—",
+      farbe: v.farbe ?? "—",
+      monthlyRate: v.monthlyRate,
+    }));
 }
 
 export async function getVehicleBySlug(slug: string): Promise<SanityVehicle | null> {
