@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MuenzMediaBlock from "@/components/MuenzMediaBlock";
 
 export const metadata: Metadata = {
   title: "Impressum – Master Leasing",
@@ -99,6 +100,10 @@ export default function ImpressumPage() {
                 Kontaktdaten zur Übersendung von nicht ausdrücklich angeforderter Werbung
                 wird hiermit widersprochen.
               </p>
+
+              <div style={{ marginTop: "56px" }}>
+                <MuenzMediaBlock utmSource="master-leasing" utmMedium="impressum" />
+              </div>
             </div>
           </div>
         </section>

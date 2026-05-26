@@ -582,3 +582,114 @@ a {
     padding-bottom: 72px;
   }
 }
+
+/* ── Münz Media Credit Block ──────────────────────────────────────────────── */
+.mm-credit-block {
+  position: relative;
+  overflow: hidden;
+  background: #0F0F0F;
+  border-radius: 10px;
+  padding: 22px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  border: 1px solid rgba(188,161,131,0.18);
+  transition:
+    border-color 0.4s ease,
+    box-shadow 0.4s ease,
+    background 0.4s ease;
+}
+.mm-credit-block:hover {
+  border-color: rgba(188,161,131,0.45);
+  box-shadow:
+    0 0 0 1px rgba(188,161,131,0.12),
+    0 0 20px -4px rgba(188,161,131,0.18);
+  background: #141414;
+}
+
+.mm-credit-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 160%;
+  width: auto;
+  opacity: 0.05;
+  transition: opacity 0.5s ease, filter 0.5s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+.mm-credit-block:hover .mm-credit-bg {
+  opacity: 0.55;
+  filter:
+    drop-shadow(0 0 4px rgba(188,161,131,0.8))
+    drop-shadow(0 0 12px rgba(188,161,131,0.4));
+}
+
+.mm-credit-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.mm-credit-cta-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.mm-credit-logo {
+  height: 28px;
+  width: auto;
+  flex-shrink: 0;
+  opacity: 0.85;
+  transition: opacity 0.4s ease;
+}
+.mm-credit-block:hover .mm-credit-logo {
+  opacity: 1;
+}
+
+.mm-credit-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: rgba(188,161,131,0.6);
+  text-transform: uppercase;
+  margin-bottom: 3px;
+  font-family: Inter, system-ui, sans-serif;
+  transition: color 0.3s ease;
+}
+.mm-credit-block:hover .mm-credit-label {
+  color: rgba(188,161,131,0.9);
+}
+
+.mm-credit-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.mm-credit-cta {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0F0F0F;
+  background: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-family: Inter, system-ui, sans-serif;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.mm-credit-cta:hover {
+  background: #BCA183;
+  color: #0F0F0F;
+  box-shadow: 0 0 12px rgba(188,161,131,0.45);
+}
