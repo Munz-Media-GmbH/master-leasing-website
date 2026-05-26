@@ -77,8 +77,9 @@ export default function SaleLeaseBackHero() {
                 maxWidth: "480px",
               }}
             >
-              Verkaufen Sie Ihr Fahrzeug oder Ihre Maschine an uns und leasen Sie es
-              direkt zurück. Sofortige Liquidität – weiterhin volle Nutzung.
+              Verkaufen Sie Ihr Fahrzeug oder Ihre Maschine einfach an die
+              Leasinggesellschaft und leasen Sie es direkt zurück. Sofortige
+              Liquidität – weiterhin volle Nutzung.
             </p>
 
             {/* Benefit bullets */}
