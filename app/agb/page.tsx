@@ -100,95 +100,24 @@ export default function AgbPage() {
               <Section title="§ 5">
                 <p>
                   Der Auftraggeber versichert mit Einreichung der Selbstauskunft die
-                  Richtigkeit und Belegbarkeit der darin gemachten Angaben. Dies
-                  betrifft insbesondere die Angaben zu seinen monatlichen
-                  Nettoeinkünften, die zur Vermittlung eines Leasingvertrages ohne
-                  Schufa und ohne Bankauskunft erforderlich sind. Die monatlichen
-                  Nettoeinkünfte errechnen sich vom Jahresgewinn nach Abzug aller
-                  Steuern und Abgaben geteilt durch 12 Monate.
+                  Richtigkeit und Belegbarkeit der darin gemachten Angaben.
                 </p>
               </Section>
 
               <Section title="§ 6">
                 <p>
                   Dem Auftraggeber stehen verschiedene Leasingtarife zur möglichen
-                  Verfügung. Hierbei handelt es sich um die Tarife LSZ10, LSZ25, LSZ30,
-                  LSZ35, LSZ40, LSZ45, LSZ50. Die Tarife unterscheiden sich in erster
-                  Linie durch die Leasingsonderzahlung. Die im Tarif aufgeführte Zahl
-                  ist hierbei bezeichnend für die Höhe in Prozent (z. B. LSZ10 = 10 %
+                  Verfügung. Hierbei handelt es sich um die Tarife LSZ15, LSZ30, LSZ35,
+                  LSZ40, LSZ45, LSZ50. Die Tarife unterscheiden sich in erster Linie
+                  durch die Leasingsonderzahlung. Die im Tarif aufgeführte Zahl ist
+                  hierbei bezeichnend für die Höhe in Prozent (z. B. LSZ15 = 15 %
                   Leasingsonderzahlung usw.).
                 </p>
                 <p style={{ marginTop: "12px" }}>
-                  Bei gebrauchten Pkws, die älter als 45 Monate sind, ist mindestens
-                  der Tarif LSZ30, LSZ40 oder LSZ50 erforderlich. Bei Fahrzeugen ab
-                  einem Fahrzeugpreis von fünfzigtausend EURO ist mindestens der Tarif
-                  LSZ30 erforderlich. Die Laufzeit der Verträge wird ebenfalls immer
-                  individuell für jeden Kunden kalkuliert.
-                </p>
-                <p style={{ marginTop: "12px" }}>
-                  Der Tarif LSZ10 ist nur dann möglich, wenn ein Gebrauchtwagen
-                  angeschafft wird, dessen vom Leasingnehmer mit dem Verkäufer
-                  ausgehandelter Anschaffungspreis 15 % unterhalb des
-                  Händlerverkaufswertes liegt, oder bei Neufahrzeugen ein Rabatt
-                  ausgehandelt wurde, der mindestens 15 % unterhalb des vom Hersteller
-                  vorgegebenen unverbindlichen Richtpreises liegt. Die 15 %, die ein
-                  Gebrauchtwagen preiswerter ist als der Händlerverkaufswert nach
-                  Gutachten, und die 15 % Rabatt bei einem Neuwagen werden beim Tarif
-                  LSZ10 quasi als Absicherung der Leasing- oder
-                  Finanzierungsgesellschaft behandelt, so dass im Ergebnis vom
-                  Leasingnehmer selbst nur noch 10 % Leasingsonderzahlung vom
-                  vertraglich vereinbarten Anschaffungspreis zu zahlen sind, um für
-                  die Leasing- bzw. Finanzierungsgesellschaft eine Absicherung zu
-                  erreichen, die ansonsten bei einer Leasingsonderzahlung von
-                  mindestens 30 % gegeben wäre.
-                </p>
-                <p style={{ marginTop: "12px" }}>
-                  Bitte tätigen Sie vor Klärung sämtlicher für die Leasingabwicklung
-                  nötigen Voraussetzungen keine verbindliche Bestellung, sondern nur
-                  eine Reservierung unter Vorbehalt der Leasingabwicklung. Bei Wahl
-                  des Tarifs LSZ10 achten Sie bitte bei der Fahrzeugauswahl
-                  genauestens darauf, dass die Voraussetzungen für die Erfüllung
-                  dieses Tarifes vorliegen. Für Transporter ab 3,5 t Nutzlast ist
-                  mindestens der Tarif LSZ30 erforderlich.
-                </p>
-                <p style={{ marginTop: "12px" }}>
-                  Ein Angebot wird für jedes Fahrzeug individuell erstellt. Das
-                  betrifft auch eine Fahrzeugbeleihung. Eine Leasingzusage oder
-                  Vertragsabschluss erfolgt erst nach positiver Leasingentscheidung
-                  aufgrund der einzureichenden Selbstauskunft (Leasingantrag). Die
-                  verbindlichen Konditionen und Kalkulationen erfolgen erst durch
-                  Übersendung des individuell ausgefertigten Leasingvertrages. Die
-                  Leasingsonderzahlung ist entweder an die zusagende
-                  Leasinggesellschaft oder an den Händler zu leisten, der das Fahrzeug
-                  verkauft. Dies entscheidet die jeweilige Leasinggesellschaft.
-                </p>
-                <p style={{ marginTop: "12px" }}>
-                  Die Kosten für Navigationssysteme, Freisprecheinrichtungen für
-                  Telefon, Wartungsverträge, Tuning sowie Räder und Reifen, die nicht
-                  vom Hersteller als Normalbereifung vorgesehen sind, sind vom
-                  Leasingnehmer außerhalb des Leasingvertrages zu zahlen.
-                </p>
-                <p style={{ marginTop: "12px" }}>
-                  Ein Wechsel des PKW-Leasingtarifes ist bis zur schriftlichen
-                  Annahmebestätigung des Leasingvertrages durch die jeweilige Leasing-
-                  oder Finanzierungsgesellschaft jederzeit kostenfrei möglich, kann
-                  aber nicht garantiert werden.
-                </p>
-                <p style={{ marginTop: "12px" }}>
-                  So genannte Eurofahrzeuge, EU-Reimporte und vergleichbare Fahrzeuge,
-                  die üblicherweise am bundesdeutschen Automobilmarkt zu einem
-                  niedrigeren Preis als dem vom Hersteller empfohlenen Verkaufspreis
-                  gehandelt werden, können nur zum üblichen Marktwert, nicht aber zu
-                  einem höheren angesetzt werden. Im Zweifelsfall ist ein Gutachten –
-                  vorzugsweise des TÜV – einzuholen. Der Leasingvertrag wird dann so
-                  behandelt, dass der übliche Marktwert entsprechend dem
-                  Händlerverkaufswert bei Gebrauchtwagen angesetzt wird und der
-                  Vertrag dementsprechend nach den obigen diesbezüglichen Regelungen
-                  abzuwickeln ist.
-                </p>
-                <p style={{ marginTop: "12px" }}>
-                  Wir behalten uns den Verkauf der Bestandsfahrzeuge vor. Die Bilder
-                  der Fahrzeuge sind lediglich Beispielfotos.
+                  Die Fahrzeuge auf der Webseite von Master Leasing sind nicht
+                  Eigentum von Master Leasing, sondern gehören Fremdfirmen und können
+                  jederzeit auch kurzfristig verkauft sein, also Vorverkauf
+                  vorbehalten.
                 </p>
               </Section>
 
@@ -211,9 +140,9 @@ export default function AgbPage() {
                   die Leasinggesellschaft. In allen anderen Fällen ist der Auftraggeber
                   zur Zahlung der o.g. Gebühr verpflichtet. Die
                   Bearbeitungsgebühr / Bereitstellungsgebühr der jeweiligen
-                  Leasinggesellschaft, ca. drei Prozent des Anschaffungspreises zzgl.
-                  der anfallenden MwSt., wird von der jeweiligen Gesellschaft nach
-                  Versand der Verträge erhoben.
+                  Leasinggesellschaft, ca. zwei bis drei Prozent des
+                  Anschaffungspreises zzgl. der anfallenden MwSt., wird von der
+                  jeweiligen Gesellschaft nach Versand der Verträge erhoben.
                 </p>
               </Section>
 
