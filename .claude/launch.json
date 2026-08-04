@@ -3,13 +3,10 @@
   "configurations": [
     {
       "name": "master-leasing-dev",
-      "runtimeExecutable": "/Users/patrick/Website Projekte/master-leasing-website/node_modules/.bin/next",
-      "runtimeArgs": ["dev"],
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
       "port": 3000,
-      "autoPort": true,
-      "env": {
-        "PATH": "/Users/patrick/.ScreamingFrogSEOSpider/node/5.4/node/bin:/usr/local/bin:/usr/bin:/bin"
-      }
+      "autoPort": true
     }
   ]
 }
