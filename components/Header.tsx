@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Über uns", href: "/ueberuns" },
   { label: "Fahrzeuge", href: "/fahrzeuge" },
   { label: "Geräteleasing", href: "/geraeteleasing" },
-  { label: "Sale & Lease Back", href: "/sale-und-leaseback" },
+  { label: "Sale & Leaseback / Fahrzeugbeleihung", href: "/sale-und-leaseback" },
 ];
 
 export default function Header() {

@@ -61,7 +61,7 @@ export default function SaleLeaseBackHero() {
               paddingRight: "clamp(24px, 5vw, 80px)",
             }}
           >
-            <span className="overline">Sale &amp; Lease Back</span>
+            <span className="overline">Sale &amp; Leaseback / Fahrzeugbeleihung</span>
 
             <h1 style={{ color: "#fff", marginBottom: "20px", marginTop: "12px" }}>
               Kapital freisetzen –{" "}
@@ -206,7 +206,7 @@ export default function SaleLeaseBackHero() {
           >
             <Image
               src="/images/shutterstock_18982980191-scaled.jpg"
-              alt="Sale und Lease Back – Fahrzeug verkaufen und direkt zurückleasen"
+              alt="Sale & Leaseback / Fahrzeugbeleihung – Fahrzeug verkaufen und direkt zurückleasen"
               fill
               priority
               style={{ objectFit: "cover", objectPosition: "center" }}
@@ -258,7 +258,7 @@ export default function SaleLeaseBackHero() {
                   marginBottom: "4px",
                 }}
               >
-                Sale &amp; Lease Back
+                Sale &amp; Leaseback / Fahrzeugbeleihung
               </p>
               <p
                 style={{

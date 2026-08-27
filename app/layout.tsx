@@ -100,7 +100,7 @@ const jsonLd = {
     "Auto Leasing ohne Schufa",
     "Fahrzeug Leasing",
     "Geräteleasing",
-    "Sale und Lease Back",
+    "Sale & Leaseback / Fahrzeugbeleihung",
   ],
 };
 

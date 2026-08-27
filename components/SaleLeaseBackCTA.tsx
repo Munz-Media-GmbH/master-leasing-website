@@ -24,7 +24,7 @@ export default function SaleLeaseBackCTA() {
           </h2>
           <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "17px", lineHeight: 1.75, marginBottom: "36px" }}>
             Beantworten Sie wenige Fragen zu Ihrem Fahrzeug oder Ihrer Maschine.
-            Wir prüfen unverbindlich, ob Sale &amp; Lease Back für Sie sinnvoll ist – und melden uns zeitnah.
+            Wir prüfen unverbindlich, ob Sale &amp; Leaseback für Sie sinnvoll ist – und melden uns zeitnah.
           </p>
 
           <button
@@ -44,7 +44,7 @@ export default function SaleLeaseBackCTA() {
             className="btn-primary"
             style={{ border: "none", cursor: "pointer", fontSize: "16px", padding: "16px 36px" }}
           >
-            Sale &amp; Lease Back Anfrage starten →
+            Sale &amp; Leaseback Anfrage starten →
           </button>
 
           {/* Trust badges */}

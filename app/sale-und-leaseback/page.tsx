@@ -7,9 +7,9 @@ import SaleLeaseBackCTA from "@/components/SaleLeaseBackCTA";
 import SaleLeaseBackHero from "@/components/SaleLeaseBackHero";
 
 export const metadata: Metadata = {
-  title: "Sale & Lease Back – Kapital freisetzen | Master Leasing",
+  title: "Sale & Leaseback / Fahrzeugbeleihung – Kapital freisetzen | Master Leasing",
   description:
-    "Sale & Lease Back mit Master Leasing: Fahrzeug oder Maschine verkaufen und zurückleasen. Sofort Kapital freisetzen – ohne Schufa-Prüfung.",
+    "Sale & Leaseback / Fahrzeugbeleihung mit Master Leasing: Fahrzeug oder Maschine verkaufen und zurückleasen. Sofort Kapital freisetzen – ohne Schufa-Prüfung.",
   alternates: { canonical: "https://master-leasing.com/sale-und-leaseback/" },
   robots: "follow, index",
 };

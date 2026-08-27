@@ -8,7 +8,7 @@ import ModalOpenButton from "@/components/ModalOpenButton";
 export const metadata: Metadata = {
   title: "Landmaschinen-Leasing & Traktor-Finanzierung ohne Schufa | Master Leasing",
   description:
-    "Landmaschinen leasen ohne Schufa: Traktoren, Mähdrescher, Anbaugeräte & Landtechnik – auch gebraucht. Traktor-Finanzierung & Sale-and-Leaseback für Liquidität. Zusage oft in 24 Stunden.",
+    "Landmaschinen leasen ohne Schufa: Traktoren, Mähdrescher, Anbaugeräte & Landtechnik – auch gebraucht. Traktor-Finanzierung & Sale & Leaseback für Liquidität. Zusage oft in 24 Stunden.",
   alternates: { canonical: "https://master-leasing.com/landmaschinen-leasing/" },
   robots: "follow, index",
 };
@@ -146,12 +146,12 @@ const faqItems = [
     a: "Ja. Auch gebrauchte Landtechnik – vom Schlepper bis zum Mähdrescher – lässt sich leasen oder finanzieren. Wir bewerten das Objekt individuell nach Zustand und Marktwert.",
   },
   {
-    q: "Was ist der Unterschied zwischen Leasing, Finanzierung und Sale-and-Leaseback?",
-    a: "Beim Leasing nutzen Sie die Maschine gegen feste Raten. Bei der Finanzierung erwerben Sie sie schrittweise. Beim Sale-and-Leaseback verkaufen Sie eine bereits vorhandene Maschine an die Leasinggesellschaft und leasen sie direkt zurück – so setzen Sie sofort gebundenes Kapital frei und fahren die Maschine weiter.",
+    q: "Was ist der Unterschied zwischen Leasing, Finanzierung und Sale & Leaseback?",
+    a: "Beim Leasing nutzen Sie die Maschine gegen feste Raten. Bei der Finanzierung erwerben Sie sie schrittweise. Beim Sale & Leaseback verkaufen Sie eine bereits vorhandene Maschine an die Leasinggesellschaft und leasen sie direkt zurück – so setzen Sie sofort gebundenes Kapital frei und fahren die Maschine weiter.",
   },
   {
     q: "Kann ich Kapital aus meinem bestehenden Maschinenpark freisetzen?",
-    a: "Ja. Über Sale-and-Leaseback beleihen Sie vorhandene Traktoren oder Maschinen und erhalten kurzfristig Liquidität, ohne die Maschine abzugeben. Mehr dazu auf unserer Seite Sale & Leaseback.",
+    a: "Ja. Über Sale & Leaseback beleihen Sie vorhandene Traktoren oder Maschinen und erhalten kurzfristig Liquidität, ohne die Maschine abzugeben. Mehr dazu auf unserer Seite Sale & Leaseback.",
   },
   {
     q: "Wie schnell erhalte ich eine Zusage?",
@@ -233,7 +233,7 @@ export default function LandmaschinenLeasingPage() {
             >
               Leasing und Finanzierung für Landtechnik – neu oder gebraucht,
               bankenunabhängig und ohne Bonitätsprüfung. Oder setzen Sie über
-              Sale-and-Leaseback Kapital aus Ihrem bestehenden Maschinenpark frei.
+              Sale & Leaseback Kapital aus Ihrem bestehenden Maschinenpark frei.
               Leasingzusage oft schon in 24 Stunden.
             </p>
             <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
@@ -339,7 +339,7 @@ export default function LandmaschinenLeasingPage() {
           </div>
         </section>
 
-        {/* ── Section B: Leasing, Finanzierung & Sale-and-Leaseback ── */}
+        {/* ── Section B: Leasing, Finanzierung & Sale & Leaseback ── */}
         <section
           className="section-pad"
           style={{
@@ -379,7 +379,7 @@ export default function LandmaschinenLeasingPage() {
                 Schufa-Abfrage.
               </p>
               <p style={{ marginBottom: 0 }}>
-                <strong style={{ color: "#fff" }}>Sale-and-Leaseback:</strong> Sie
+                <strong style={{ color: "#fff" }}>Sale & Leaseback:</strong> Sie
                 besitzen bereits Traktoren oder Maschinen? Dann verkaufen Sie diese an
                 die Leasinggesellschaft und leasen sie direkt zurück. So setzen Sie
                 sofort gebundenes Kapital frei und nutzen die Maschine ohne
