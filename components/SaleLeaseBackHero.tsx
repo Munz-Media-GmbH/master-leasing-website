@@ -64,8 +64,8 @@ export default function SaleLeaseBackHero() {
             <span className="overline">Sale &amp; Leaseback / Fahrzeugbeleihung</span>
 
             <h1 style={{ color: "#fff", marginBottom: "20px", marginTop: "12px" }}>
-              Kapital freisetzen –{" "}
-              <span style={{ color: "#E15C55" }}>Fahrzeug behalten</span>
+              Fahrzeug beleihen –{" "}
+              <span style={{ color: "#E15C55" }}>Kapital freisetzen, weiterfahren</span>
             </h1>
 
             <p
@@ -77,9 +77,9 @@ export default function SaleLeaseBackHero() {
                 maxWidth: "480px",
               }}
             >
-              Verkaufen Sie Ihr Fahrzeug oder Ihre Maschine einfach an die
-              Leasinggesellschaft und leasen Sie es direkt zurück. Sofortige
-              Liquidität – weiterhin volle Nutzung.
+              Beleihen Sie Ihr Auto, Ihren Transporter oder Ihre Maschine: einfach an
+              die Leasinggesellschaft verkaufen und direkt zurückleasen. Sofortige
+              Liquidität ohne Bank &amp; Schufa – Fahrzeug bleibt im Einsatz.
             </p>
 
             {/* Benefit bullets */}

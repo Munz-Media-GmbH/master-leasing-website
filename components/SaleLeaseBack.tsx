@@ -125,6 +125,18 @@ export default function SaleLeaseBack({ hideFaq, hideProcess, hideOverview, hide
 
   const faqItems = [
     {
+      q: "Was bedeutet Fahrzeug beleihen bei Master Leasing?",
+      a: "Fahrzeugbeleihung bedeutet bei uns Sale & Leaseback: Sie verkaufen Ihr bezahltes Fahrzeug an die Leasinggesellschaft und leasen es direkt zurück. So beleihen Sie Ihr Auto, Ihren Transporter oder Ihre Maschine, erhalten sofort Kapital und fahren das Fahrzeug uneingeschränkt weiter.",
+    },
+    {
+      q: "Kann ich mein Auto beleihen und weiterfahren?",
+      a: "Ja. Genau das ist der Kern von Sale & Leaseback / Fahrzeugbeleihung: Sie beleihen Ihr Fahrzeug und nutzen es ohne Unterbrechung weiter. Das Fahrzeug bleibt in Ihrem Betrieb, nur das Eigentum wechselt für die Laufzeit.",
+    },
+    {
+      q: "Was ist der Unterschied zwischen Fahrzeugbeleihung und einem Pfandleihhaus?",
+      a: "Beim Pfandleihhaus geben Sie das Fahrzeug meist ab und zahlen hohe Gebühren, um Ihr Auto zu verpfänden. Bei der Fahrzeugbeleihung über Sale & Leaseback behalten Sie das Fahrzeug im Einsatz, es läuft als sauberer gewerblicher Leasingvertrag – ohne Pfandhaus, ohne Bank, ohne Schufa-Prüfung.",
+    },
+    {
       q: "Bleibt das Fahrzeug wirklich in meinem Unternehmen?",
       a: "Ja. Sie nutzen das Fahrzeug weiterhin uneingeschränkt im Tagesgeschäft. Der einzige Unterschied: Das Eigentum geht auf uns über, während Sie es per Leasingvertrag zurückleasen.",
     },
@@ -146,8 +158,24 @@ export default function SaleLeaseBack({ hideFaq, hideProcess, hideOverview, hide
     },
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+
   return (
     <>
+      {!hideFaq && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       {/* ── Sektion 1: Warum Sale and Leaseback ── */}
       <section
         id="sale-leaseback"
@@ -159,15 +187,17 @@ export default function SaleLeaseBack({ hideFaq, hideProcess, hideOverview, hide
       >
         <div className="container">
           <div className="scroll-up" style={{ maxWidth: "700px", marginBottom: "16px" }}>
-            <span className="overline">Sale and Leaseback</span>
+            <span className="overline">Sale &amp; Leaseback / Fahrzeugbeleihung</span>
             <h2 style={{ marginTop: "12px", marginBottom: "20px" }}>
-              Warum{" "}
-              <span style={{ color: "#E15C55" }}>Sale and Leaseback</span>{" "}
-              für Unternehmen interessant sein kann
+              Fahrzeug{" "}
+              <span style={{ color: "#E15C55" }}>beleihen und weiterfahren</span>{" "}
+              – mit Sale &amp; Leaseback
             </h2>
             <p style={{ fontSize: "18px", color: "rgba(255,255,255,0.6)", lineHeight: "1.75" }}>
-              Für viele Unternehmen ist Sale and Leaseback ein Weg, finanzielle Flexibilität zu
-              gewinnen, ohne operative Abläufe oder Mobilität einzuschränken.
+              Sie möchten Ihr Auto, Ihren Transporter oder Ihre Maschine beleihen, ohne es
+              abzugeben? Über Sale &amp; Leaseback (Fahrzeugbeleihung) setzen Unternehmen
+              gebundenes Kapital aus dem Fuhrpark frei und fahren das Fahrzeug uneingeschränkt
+              weiter – ohne Bank, ohne Schufa-Prüfung, keine Alternative zum Pfandleihhaus nötig.
             </p>
           </div>
 
