@@ -42,11 +42,11 @@ const nextConfig: NextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://base.muenzmedia.de https://cloud.ccm19.de https://www.googletagmanager.com https://www.googleadservices.com https://www.google.com https://googleads.g.doubleclick.net",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://base.muenzmedia.de https://cloud.ccm19.de https://www.googletagmanager.com https://www.googleadservices.com https://www.google.com https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com https://*.smarketer.de",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cloud.ccm19.de",
               "font-src 'self' data: https://fonts.gstatic.com",
               "img-src 'self' data: blob: https://cdn.sanity.io https:",
-              "connect-src 'self' https://base.muenzmedia.de https://cloud.ccm19.de https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://*.doubleclick.net https://*.api.sanity.io wss://*.api.sanity.io https://cdn.sanity.io",
+              "connect-src 'self' https://base.muenzmedia.de https://cloud.ccm19.de https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://*.doubleclick.net https://pagead2.googlesyndication.com https://*.smarketer.de https://*.api.sanity.io wss://*.api.sanity.io https://cdn.sanity.io",
               "frame-src 'self' https://www.googletagmanager.com https://td.doubleclick.net https://*.doubleclick.net",
               "media-src 'self'",
               "object-src 'none'",
