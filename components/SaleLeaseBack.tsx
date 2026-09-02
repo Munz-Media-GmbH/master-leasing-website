@@ -194,8 +194,8 @@ export default function SaleLeaseBack({ hideFaq, hideProcess, hideOverview, hide
               – mit Sale &amp; Leaseback
             </h2>
             <p style={{ fontSize: "18px", color: "rgba(255,255,255,0.6)", lineHeight: "1.75" }}>
-              Sie möchten Ihr Auto, Ihren Transporter oder Ihre Maschine beleihen, ohne es
-              abzugeben? Über Sale &amp; Leaseback (Fahrzeugbeleihung) setzen Unternehmen
+              Sie möchten Ihr Auto (KFZ beleihen), Ihren Transporter oder Ihre Maschine
+              beleihen, ohne es abzugeben? Über Sale &amp; Leaseback (Fahrzeugbeleihung) setzen Unternehmen
               gebundenes Kapital aus dem Fuhrpark frei und fahren das Fahrzeug uneingeschränkt
               weiter – ohne Bank, ohne Schufa-Prüfung, keine Alternative zum Pfandleihhaus nötig.
             </p>

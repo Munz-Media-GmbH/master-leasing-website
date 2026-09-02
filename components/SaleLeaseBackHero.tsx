@@ -64,8 +64,8 @@ export default function SaleLeaseBackHero() {
             <span className="overline">Sale &amp; Leaseback / Fahrzeugbeleihung</span>
 
             <h1 style={{ color: "#fff", marginBottom: "20px", marginTop: "12px" }}>
-              Fahrzeug beleihen –{" "}
-              <span style={{ color: "#E15C55" }}>Kapital freisetzen, weiterfahren</span>
+              Auto beleihen und weiterfahren –{" "}
+              <span style={{ color: "#E15C55" }}>Kapital sofort freisetzen</span>
             </h1>
 
             <p
