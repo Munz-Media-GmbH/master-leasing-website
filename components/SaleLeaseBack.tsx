@@ -265,6 +265,79 @@ export default function SaleLeaseBack({ hideFaq, hideProcess, hideOverview, hide
         </div>
       </section>
 
+      {/* ── Sektion 1b: Das können Sie beleihen ── */}
+      <section
+        className="section-pad"
+        style={{
+          background: "#0c0c0c",
+          borderTop: "1px solid rgba(255,255,255,0.06)",
+        }}
+      >
+        <div className="container">
+          <div className="scroll-up" style={{ textAlign: "center", marginBottom: "56px" }}>
+            <span className="overline">Objektarten</span>
+            <h2 style={{ marginTop: "12px", marginBottom: "16px" }}>
+              Das können Sie{" "}
+              <span style={{ color: "#E15C55" }}>beleihen</span>
+            </h2>
+            <p style={{ fontSize: "18px", color: "rgba(255,255,255,0.6)", maxWidth: "620px", margin: "0 auto", lineHeight: 1.7 }}>
+              Vom PKW bis zur Erntemaschine – wir beleihen gewerblich genutzte
+              Fahrzeuge und Maschinen über Sale &amp; Leaseback. Auch gebraucht.
+            </p>
+          </div>
+
+          <div
+            className="slb-objects-grid"
+            style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px" }}
+          >
+            {[
+              { t: "Auto & PKW beleihen", d: "Firmenwagen, Geschäfts- und Gewerbe-PKW aller Marken." },
+              { t: "Transporter & Nutzfahrzeuge beleihen", d: "Sprinter, Kastenwagen, Kipper und leichte Nutzfahrzeuge." },
+              { t: "LKW beleihen", d: "Zugmaschinen, Sattelzüge, Anhänger und schwere Nutzfahrzeuge." },
+              { t: "Traktor & Schlepper beleihen", d: "Standard-, Groß- und Kompaktschlepper – neu oder gebraucht." },
+              { t: "Landmaschinen beleihen", d: "Mähdrescher, Erntetechnik, Anbau- und Bodengeräte." },
+              { t: "Bagger, Baumaschinen & Maschinen beleihen", d: "Baugerät, Werkzeug- und Produktionsmaschinen sowie Anlagen." },
+            ].map((o, i) => (
+              <div
+                key={o.t}
+                className={`scroll-up${i % 3 !== 0 ? ` scroll-d${Math.min(i % 3, 2)}` : ""}`}
+                style={{
+                  background: "rgba(255,255,255,0.03)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  borderRadius: "16px",
+                  padding: "28px 24px",
+                }}
+              >
+                <h3
+                  style={{
+                    fontFamily: "'Quantico', sans-serif",
+                    fontSize: "17px",
+                    color: "#fff",
+                    margin: "0 0 8px",
+                    lineHeight: "1.3",
+                  }}
+                >
+                  {o.t}
+                </h3>
+                <p style={{ fontSize: "14px", lineHeight: "1.6", color: "rgba(255,255,255,0.55)", margin: 0 }}>
+                  {o.d}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <p
+            className="scroll-up"
+            style={{ textAlign: "center", marginTop: "28px", color: "rgba(255,255,255,0.55)", fontSize: "15px", lineHeight: 1.7 }}
+          >
+            Speziell für die Landwirtschaft:{" "}
+            <a href="/landmaschinen-leasing/" style={{ color: "#E15C55" }}>
+              Landmaschinen- &amp; Traktor-Leasing →
+            </a>
+          </p>
+        </div>
+      </section>
+
       {/* ── Sektion 2: Einfach & Praktisch – 6 Vorteile ── */}
       <section
         className="section-pad"
@@ -850,6 +923,7 @@ export default function SaleLeaseBack({ hideFaq, hideProcess, hideOverview, hide
       <style>{`
         @media (max-width: 1024px) {
           .slb-cards-grid { grid-template-columns: 1fr !important; }
+          .slb-objects-grid { grid-template-columns: repeat(2, 1fr) !important; }
           .slb-benefits-grid { grid-template-columns: repeat(2, 1fr) !important; }
           .slb-process-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 40px !important; }
           .slb-process-grid > div { padding: 0 !important; }
@@ -857,6 +931,7 @@ export default function SaleLeaseBack({ hideFaq, hideProcess, hideOverview, hide
           .slb-table-grid > div:first-child { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.08) !important; }
         }
         @media (max-width: 768px) {
+          .slb-objects-grid { grid-template-columns: 1fr !important; }
           .slb-benefits-grid { grid-template-columns: 1fr !important; }
           .slb-usecases-grid { grid-template-columns: 1fr !important; }
           .slb-process-grid { grid-template-columns: 1fr !important; }
