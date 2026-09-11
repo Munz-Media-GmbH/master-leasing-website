@@ -90,6 +90,57 @@ const nextConfig: NextConfig = {
         destination: "/sale-und-leaseback",
         permanent: true,
       },
+
+      // ── WordPress-Relaunch: alte URLs 301 → neue Struktur ──
+      // Alte Fahrzeug-Posts lagen auf Root-Ebene (/%postname%/),
+      // heute unter /fahrzeuge/[slug]. Quelle: WP-DB-Dump (gKXHfV_posts).
+      {
+        source: "/vw-polo-tsi-life-led-virtual-navi",
+        destination: "/fahrzeuge/vw-polo-tsi-life-led-virtual-navi",
+        permanent: true,
+      },
+      {
+        source: "/vw-taigo-tsi-goal-pdc-3-2",
+        destination: "/fahrzeuge/vw-taigo-tsi-goal-pdc-3-2",
+        permanent: true,
+      },
+      {
+        source: "/vw-caddy-tdi-maxi-led",
+        destination: "/fahrzeuge/vw-caddy-tdi-maxi-led",
+        permanent: true,
+      },
+      {
+        source: "/vw-crafter-35-kasten-hd-lang",
+        destination: "/fahrzeuge/vw-crafter-35-kasten-hd-lang",
+        permanent: true,
+      },
+      {
+        source: "/vw-t7-kasten-lr-acc-led-klima",
+        destination: "/fahrzeuge/vw-t7-kasten-lr-acc-led-klima",
+        permanent: true,
+      },
+      {
+        source: "/vw-golf-tsi-life-led-acc-navi",
+        destination: "/fahrzeuge/vw-golf-tsi-life-led-acc-navi",
+        permanent: true,
+      },
+      // Alte WP-Kategorie-Archive → Fahrzeug-Übersicht bzw. Startseite
+      {
+        source: "/category/fahrzeuge",
+        destination: "/fahrzeuge",
+        permanent: true,
+      },
+      {
+        source: "/category/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      // Alte Startseiten-Slug (/start-3/) → Startseite
+      {
+        source: "/start-3",
+        destination: "/",
+        permanent: true,
+      },
     ];
   },
 };
