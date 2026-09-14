@@ -388,6 +388,12 @@ export default function LandmaschinenLeasingPage() {
                   Mehr zu Sale &amp; Leaseback →
                 </a>
               </p>
+              <p style={{ marginTop: "20px", marginBottom: 0 }}>
+                Nur ein Traktor gesucht?{" "}
+                <a href="/traktor-leasing/" style={{ color: "#E15C55" }}>
+                  Zum Traktor-Leasing &amp; zur Traktor-Finanzierung →
+                </a>
+              </p>
             </div>
           </div>
         </section>

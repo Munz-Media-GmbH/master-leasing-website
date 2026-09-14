@@ -190,6 +190,7 @@ export default function Footer() {
               { label: "Fahrzeuge", href: "/fahrzeuge" },
               { label: "Geräteleasing", href: "/geraeteleasing" },
               { label: "Landmaschinen-Leasing", href: "/landmaschinen-leasing" },
+              { label: "Traktor-Leasing", href: "/traktor-leasing" },
               { label: "Sale & Leaseback / Fahrzeugbeleihung", href: "/sale-und-leaseback" },
               { label: "Kontakt", href: "/kontakt" },
             ].map((item) => (
