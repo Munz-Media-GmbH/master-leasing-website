@@ -22,13 +22,11 @@ export default function SaleLeaseBackHero() {
             grid-template-columns: 1fr !important;
           }
           .slb-hero-img-col {
-            min-height: 300px !important;
-            height: 300px !important;
+            min-height: 280px !important;
             order: -1;
           }
           .slb-hero-text-col {
-            padding-bottom: 60px !important;
-            padding-top: 0 !important;
+            padding: 0 !important;
           }
         }
       `}</style>
@@ -37,30 +35,29 @@ export default function SaleLeaseBackHero() {
         style={{
           background: "#0a0a0a",
           borderBottom: "1px solid rgba(255,255,255,0.06)",
-          overflow: "hidden",
+          paddingTop: "clamp(120px, 14vh, 170px)",
+          paddingBottom: "clamp(60px, 8vh, 90px)",
         }}
       >
-        <div
-          className="slb-hero-grid"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            minHeight: "100vh",
-          }}
-        >
-          {/* ── Left: Text ─────────────────────────────────────────── */}
+        <div className="container">
           <div
-            className="slb-hero-text-col"
+            className="slb-hero-grid"
             style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              paddingTop: "clamp(90px, 10vh, 140px)",
-              paddingBottom: "clamp(40px, 5vh, 80px)",
-              paddingLeft: "clamp(24px, 6vw, 100px)",
-              paddingRight: "clamp(24px, 5vw, 80px)",
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "clamp(32px, 4vw, 56px)",
+              alignItems: "center",
             }}
           >
+            {/* ── Left: Text ─────────────────────────────────────────── */}
+            <div
+              className="slb-hero-text-col"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+              }}
+            >
             <span className="overline">Sale &amp; Leaseback / Fahrzeugbeleihung</span>
 
             <h1 style={{ color: "#fff", marginBottom: "20px", marginTop: "12px" }}>
@@ -202,6 +199,10 @@ export default function SaleLeaseBackHero() {
             style={{
               position: "relative",
               overflow: "hidden",
+              borderRadius: "20px",
+              border: "1px solid rgba(255,255,255,0.08)",
+              minHeight: "clamp(360px, 52vh, 520px)",
+              height: "100%",
             }}
           >
             <Image
@@ -211,16 +212,6 @@ export default function SaleLeaseBackHero() {
               priority
               style={{ objectFit: "cover", objectPosition: "center" }}
               sizes="(max-width: 900px) 100vw, 50vw"
-            />
-            {/* Left fade to blend with text column */}
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                background:
-                  "linear-gradient(90deg, #0a0a0a 0%, rgba(10,10,10,0.5) 25%, transparent 60%)",
-                pointerEvents: "none",
-              }}
             />
             {/* Bottom fade */}
             <div
@@ -272,6 +263,7 @@ export default function SaleLeaseBackHero() {
                 Kapital freisetzen –<br />Fahrzeug behalten
               </p>
             </div>
+          </div>
           </div>
         </div>
       </section>
