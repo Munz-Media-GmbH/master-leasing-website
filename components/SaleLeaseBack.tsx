@@ -1,5 +1,5 @@
 import ModalOpenButton from "@/components/ModalOpenButton";
-export default function SaleLeaseBack({ hideFaq, hideProcess, hideOverview, hideCases }: { hideFaq?: boolean; hideProcess?: boolean; hideOverview?: boolean; hideCases?: boolean } = {}) {
+export default function SaleLeaseBack({ hideFaq, hideProcess, hideOverview, hideCases, landingLink }: { hideFaq?: boolean; hideProcess?: boolean; hideOverview?: boolean; hideCases?: boolean; landingLink?: boolean } = {}) {
   const benefits = [
     {
       icon: (
@@ -199,6 +199,16 @@ export default function SaleLeaseBack({ hideFaq, hideProcess, hideOverview, hide
               gebundenes Kapital aus dem Fuhrpark frei und fahren das Fahrzeug uneingeschränkt
               weiter – ohne Bank, ohne Schufa-Prüfung, keine Alternative zum Pfandleihhaus nötig.
             </p>
+            {landingLink && (
+              <div style={{ display: "flex", gap: "24px", flexWrap: "wrap", marginTop: "20px" }}>
+                <a href="/sale-und-leaseback" style={{ color: "#E15C55", fontSize: "16px", fontWeight: 500 }}>
+                  Auto beleihen mit Sale &amp; Leaseback →
+                </a>
+                <a href="/ratgeber/auto-beleihen-und-weiterfahren" style={{ color: "rgba(255,255,255,0.7)", fontSize: "16px" }}>
+                  Ratgeber: Auto beleihen und weiterfahren →
+                </a>
+              </div>
+            )}
           </div>
 
           <div

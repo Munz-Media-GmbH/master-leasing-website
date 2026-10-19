@@ -10,6 +10,7 @@ import VehiclesSection from "@/components/VehiclesSection";
 import SaleLeaseBack from "@/components/SaleLeaseBack";
 import ContactCTA from "@/components/ContactCTA";
 import FAQSection from "@/components/FAQSection";
+import RatgeberTeaser from "@/components/RatgeberTeaser";
 import Footer from "@/components/Footer";
 import { getVehiclesForListing } from "@/lib/sanity";
 
@@ -28,7 +29,8 @@ export default async function Home() {
         <WhySection />
         <Testimonials />
         <VehiclesSection vehicles={vehicles} />
-        <SaleLeaseBack hideFaq hideProcess hideOverview hideCases />
+        <SaleLeaseBack hideFaq hideProcess hideOverview hideCases landingLink />
+        <RatgeberTeaser />
         <FAQSection />
         <ContactCTA />
       </main>

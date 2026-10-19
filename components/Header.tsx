@@ -10,6 +10,7 @@ const navLinks = [
   { label: "Fahrzeuge", href: "/fahrzeuge" },
   { label: "Geräteleasing", href: "/geraeteleasing" },
   { label: "Sale & Leaseback / Fahrzeugbeleihung", href: "/sale-und-leaseback" },
+  { label: "Ratgeber", href: "/ratgeber" },
 ];
 
 export default function Header() {
@@ -68,7 +69,9 @@ export default function Header() {
             <a
               key={link.label}
               href={link.href}
+              className="desktop-nav-link"
               style={{
+                whiteSpace: "nowrap",
                 fontFamily: "'Quantico', sans-serif",
                 fontSize: "16px",
                 color: "rgba(255,255,255,0.85)",
@@ -170,7 +173,11 @@ export default function Header() {
       )}
 
       <style>{`
-        @media (max-width: 1024px) {
+        @media (max-width: 1360px) {
+          .desktop-nav { gap: 22px !important; }
+          .desktop-nav-link { font-size: 15px !important; }
+        }
+        @media (max-width: 1180px) {
           .desktop-nav { display: none !important; }
           .mobile-menu-btn { display: flex !important; }
         }

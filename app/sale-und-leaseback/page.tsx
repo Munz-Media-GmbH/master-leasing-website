@@ -5,6 +5,7 @@ import SaleLeaseBack from "@/components/SaleLeaseBack";
 import CTABanner from "@/components/CTABanner";
 import SaleLeaseBackCTA from "@/components/SaleLeaseBackCTA";
 import SaleLeaseBackHero from "@/components/SaleLeaseBackHero";
+import RatgeberLinks from "@/components/RatgeberLinks";
 
 export const metadata: Metadata = {
   title: "Sale & Leaseback / Fahrzeugbeleihung – Kapital freisetzen | Master Leasing",
@@ -21,6 +22,7 @@ export default function SaleUndLeasebackPage() {
       <main>
         <SaleLeaseBackHero />
         <SaleLeaseBack />
+        <RatgeberLinks topic="slb" title={<>Fragen zu <span style={{ color: "#E15C55" }}>Sale &amp; Leaseback / Fahrzeugbeleihung</span></>} />
         <SaleLeaseBackCTA />
         <CTABanner />
       </main>

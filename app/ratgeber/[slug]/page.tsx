@@ -68,7 +68,7 @@ const conversion: Record<
     },
   },
   schufa: {
-    heroImage: "/images/hero-bg.jpg",
+    heroImage: "/images/fahrzeug-pkw.jpg",
     ctaLabel: "Leasing ohne Schufa anfragen",
     benefits: [
       { title: "Ohne Schufa-Abfrage", desc: "Keine Bankauskunft, keine klassische Bonitätsprüfung." },
@@ -190,7 +190,7 @@ export default async function RatgeberArticlePage({ params }: Props) {
         {/* ── Hero: Frage ── */}
         <section style={{ position: "relative", paddingTop: "150px", paddingBottom: "64px", overflow: "hidden" }}>
           <Image
-            src={conv.heroImage}
+            src={article.image ?? conv.heroImage}
             alt=""
             fill
             priority

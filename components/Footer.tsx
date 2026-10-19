@@ -188,10 +188,12 @@ export default function Footer() {
             {[
               { label: "Über uns", href: "/ueberuns" },
               { label: "Fahrzeuge", href: "/fahrzeuge" },
+              { label: "Auto leasen trotz negativer Schufa", href: "/auto-leasen-trotz-negativer-schufa" },
               { label: "Geräteleasing", href: "/geraeteleasing" },
               { label: "Landmaschinen-Leasing", href: "/landmaschinen-leasing" },
               { label: "Traktor-Leasing", href: "/traktor-leasing" },
               { label: "Sale & Leaseback / Fahrzeugbeleihung", href: "/sale-und-leaseback" },
+              { label: "Ratgeber", href: "/ratgeber" },
               { label: "Kontakt", href: "/kontakt" },
             ].map((item) => (
               <a

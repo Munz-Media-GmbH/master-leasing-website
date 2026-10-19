@@ -3,6 +3,7 @@ import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTABanner from "@/components/CTABanner";
+import RatgeberLinks from "@/components/RatgeberLinks";
 import ModalOpenButton from "@/components/ModalOpenButton";
 
 export const metadata: Metadata = {
@@ -623,6 +624,11 @@ export default function LandmaschinenLeasingPage() {
         </section>
 
         <CTABanner />
+
+        <RatgeberLinks
+          slugs={["traktor-leasen-ohne-schufa", "traktor-landmaschinen-beleihen", "sale-and-leaseback-landwirtschaft"]}
+          title={<>Ratgeber für <span style={{ color: "#E15C55" }}>Landwirte</span></>}
+        />
 
         {/* ── FAQ ── */}
         <section
