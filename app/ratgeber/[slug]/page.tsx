@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RatgeberCTAButton from "@/components/RatgeberCTAButton";
-import { articles, getArticle, topicMeta, type RatgeberTopic } from "@/lib/ratgeber";
+import { articles, getArticle, relatedSlugs, topicMeta, type RatgeberTopic } from "@/lib/ratgeber";
 
 const SITE = "https://master-leasing.com";
 
@@ -141,7 +141,15 @@ export default async function RatgeberArticlePage({ params }: Props) {
   const topic = topicMeta[article.topic];
   const conv = conversion[article.topic];
   const url = `${SITE}/ratgeber/${article.slug}`;
-  const related = articles.filter((a) => a.slug !== article.slug && a.topic === article.topic).slice(0, 3);
+  // Kuratierte Querverweise (im Artikel) + alle weiteren Fragen zum Thema (Sidebar & Fußbereich)
+  const curated = (relatedSlugs[article.slug] ?? [])
+    .map((s) => articles.find((a) => a.slug === s))
+    .filter((a) => a !== undefined);
+  const sameTopic = articles.filter((a) => a.slug !== article.slug && a.topic === article.topic);
+  const otherTopic = article.topic === "slb" ? "schufa" : "slb";
+  const bridge = articles.filter(
+    (a) => a.topic === otherTopic && !curated.some((c) => c.slug === a.slug),
+  ).slice(0, 3);
 
   const schema = [
     {
@@ -276,6 +284,21 @@ export default async function RatgeberArticlePage({ params }: Props) {
                 </div>
               ))}
 
+              {/* Passende Fragen */}
+              {curated.length > 0 && (
+                <div className="rg-curated">
+                  <p className="rg-related-label">Passende Fragen</p>
+                  <div className="rg-curated-grid">
+                    {curated.map((r) => (
+                      <a key={r.slug} href={`/ratgeber/${r.slug}`} className="rg-curated-item">
+                        <span>{r.question}</span>
+                        <span className="rg-curated-more">Antwort lesen →</span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Inline-CTA im Artikel */}
               <div className="rg-inline-cta">
                 <div>
@@ -291,6 +314,14 @@ export default async function RatgeberArticlePage({ params }: Props) {
 
             {/* Sidebar */}
             <aside className="rg-sidebar">
+              <div className="rg-sidebar-toc">
+                <p className="rg-related-label">Weitere Fragen: {topic.label}</p>
+                {sameTopic.map((r) => (
+                  <a key={r.slug} href={`/ratgeber/${r.slug}`}>
+                    {r.question}
+                  </a>
+                ))}
+              </div>
               <div className="rg-sidebar-card">
                 <span className="overline" style={{ marginBottom: "14px" }}>Unverbindlich</span>
                 <p className="rg-sidebar-title">{conv.sidebar.title}</p>
@@ -422,9 +453,9 @@ export default async function RatgeberArticlePage({ params }: Props) {
             </div>
 
             <div style={{ maxWidth: "800px", margin: "48px auto 0" }}>
-              <p className="rg-related-label">Weiterlesen</p>
+              <p className="rg-related-label">Alle Fragen zu {topic.label}</p>
               <div className="rg-related">
-                {related.map((r) => (
+                {sameTopic.map((r) => (
                   <a key={r.slug} href={`/ratgeber/${r.slug}`} className="rg-related-item">
                     {r.question} →
                   </a>
@@ -437,6 +468,17 @@ export default async function RatgeberArticlePage({ params }: Props) {
                     Traktor beleihen, leasen &amp; finanzieren →
                   </a>
                 )}
+              </div>
+              <p className="rg-related-label" style={{ marginTop: "32px" }}>Auch interessant: {topicMeta[otherTopic].label}</p>
+              <div className="rg-related">
+                {bridge.map((r) => (
+                  <a key={r.slug} href={`/ratgeber/${r.slug}`} className="rg-related-item">
+                    {r.question} →
+                  </a>
+                ))}
+                <a href="/ratgeber" className="rg-related-item">
+                  Alle Fragen im Ratgeber →
+                </a>
               </div>
             </div>
           </div>
@@ -476,7 +518,8 @@ export default async function RatgeberArticlePage({ params }: Props) {
         .rg-inline-cta-title { color: #fff; font-family: 'Quantico', sans-serif; font-weight: 700; font-size: 19px; margin: 0 0 6px; }
         .rg-inline-cta-text { color: rgba(255,255,255,0.55); font-size: 15px; margin: 0; line-height: 1.6; }
 
-        .rg-sidebar { position: sticky; top: 110px; display: flex; flex-direction: column; gap: 16px; }
+        .rg-sidebar { align-self: stretch; display: flex; flex-direction: column; gap: 16px; }
+        .rg-sidebar-card { position: sticky; top: 110px; }
         .rg-sidebar-card { background: #151515; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 28px 24px; }
         .rg-sidebar-title { color: #fff; font-family: 'Quantico', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.3; margin: 0 0 18px; }
         .rg-sidebar-phone { display: block; text-align: center; color: rgba(255,255,255,0.5); font-size: 14px; margin-top: 14px; }
@@ -508,6 +551,14 @@ export default async function RatgeberArticlePage({ params }: Props) {
         .rg-faq[open] summary svg { transform: rotate(180deg); }
         .rg-faq p { color: rgba(255,255,255,0.62); font-size: 16px; line-height: 1.75; margin: 0; padding: 18px 26px 22px; border-top: 1px solid rgba(255,255,255,0.06); }
 
+        .rg-curated { margin: 8px 0 32px; }
+        .rg-curated-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+        .rg-curated-item { display: flex; flex-direction: column; gap: 10px; color: #fff; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 16px 18px; font-size: 15px; line-height: 1.45; transition: border-color 0.2s; }
+        .rg-curated-item:hover { border-color: rgba(225,92,85,0.5); }
+        .rg-curated-more { color: #E15C55; font-size: 13px; margin-top: auto; }
+        .rg-sidebar-toc { display: flex; flex-direction: column; gap: 2px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 18px 16px; }
+        .rg-sidebar-toc a { color: rgba(255,255,255,0.62); font-size: 14px; line-height: 1.45; padding: 7px 4px; border-radius: 6px; }
+        .rg-sidebar-toc a:hover { color: #E15C55; }
         .rg-related-label { color: rgba(255,255,255,0.45); font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 14px; }
         .rg-related { display: flex; flex-direction: column; gap: 10px; }
         .rg-related-item { color: #fff; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 16px 20px; font-size: 16px; transition: border-color 0.2s, color 0.2s; }
@@ -516,12 +567,15 @@ export default async function RatgeberArticlePage({ params }: Props) {
         @media (max-width: 1024px) {
           .rg-layout { grid-template-columns: minmax(0, 1fr); gap: 40px; }
           .rg-sidebar { position: static; }
+          .rg-sidebar-card { position: static; }
+          .rg-sidebar-toc { display: none; }
           .rg-grid-4 { grid-template-columns: repeat(2, 1fr); }
           .rg-trust { grid-template-columns: 1fr; gap: 40px; }
         }
         @media (max-width: 640px) {
           .rg-grid-4 { grid-template-columns: 1fr; }
           .rg-inline-cta { flex-direction: column; align-items: flex-start; }
+          .rg-curated-grid { grid-template-columns: 1fr; }
           .rg-answer { padding: 22px 20px; }
           .rg-answer-text { font-size: 17px; }
           .rg-cta-box { padding: 28px 22px; }

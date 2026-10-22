@@ -161,7 +161,7 @@ export const articles: RatgeberArticle[] = [
         h2: "Liquidität aus dem eigenen Fuhrpark",
         paragraphs: [
           "In bezahlten Fahrzeugen und Maschinen steckt oft viel gebundenes Kapital. Über [Sale & Leaseback / Fahrzeugbeleihung](/sale-und-leaseback) machen Sie es verfügbar, ohne auf die Fahrzeuge zu verzichten: Der Kaufpreis fließt auf Ihr Konto, die Fahrzeuge bleiben im Einsatz.",
-          "Weil der Wert des Fahrzeugs als Sicherheit dient, spielt Ihre Bonität keine entscheidende Rolle. Auch mit Schufa-Eintrag oder nach einer Absage der Bank ist das möglich.",
+          "Weil der Wert des Fahrzeugs als Sicherheit dient, spielt Ihre Bonität keine entscheidende Rolle. Auch mit Schufa-Eintrag oder nach einer Absage der Bank ist das möglich. Wie das im Detail abläuft, erklärt [Wie funktioniert Sale & Leaseback bei Fahrzeugen?](/ratgeber/wie-funktioniert-sale-and-leaseback) – einen Überblick über weitere Wege gibt [Alternativen zum Bankkredit](/ratgeber/alternativen-zum-bankkredit).",
         ],
       },
       {
@@ -271,6 +271,9 @@ export const articles: RatgeberArticle[] = [
           "Vertrag: Verkauf an die Leasinggesellschaft und Leasing zurück",
           "Auszahlung – und Sie fahren einfach weiter",
         ],
+        paragraphs: [
+          "Den kompletten Ablauf mit Dauer je Schritt finden Sie unter [Wie funktioniert Sale & Leaseback bei Fahrzeugen?](/ratgeber/wie-funktioniert-sale-and-leaseback). Mehrere Fahrzeuge? Dann lesen Sie, wie Sie [Kapital aus dem Fuhrpark freisetzen](/ratgeber/kapital-aus-fuhrpark-freisetzen).",
+        ],
       },
       {
         h2: "Welche Fahrzeuge lassen sich beleihen?",
@@ -308,6 +311,7 @@ export const articles: RatgeberArticle[] = [
         h2: "Das Prinzip in drei Sätzen",
         paragraphs: [
           "„Sale“ heißt Verkauf, „Leaseback“ heißt Zurückleasen. Das Eigentum am Fahrzeug wechselt für die Laufzeit zur Leasinggesellschaft, die Nutzung bleibt bei Ihnen. Aus gebundenem Kapital wird so frei verfügbare Liquidität.",
+          "Typische Anwendungsfälle: [Auto beleihen und weiterfahren](/ratgeber/auto-beleihen-und-weiterfahren), [LKW beleihen](/ratgeber/lkw-beleihen) oder [Traktor und Landmaschinen beleihen](/ratgeber/traktor-landmaschinen-beleihen).",
         ],
       },
       {
@@ -390,7 +394,7 @@ export const articles: RatgeberArticle[] = [
           "Ohne Bank und ohne Schufa-Abfrage",
         ],
         paragraphs: [
-          "Mehr dazu: [Auto beleihen und weiterfahren](/ratgeber/auto-beleihen-und-weiterfahren) und unsere Seite [Sale & Leaseback / Fahrzeugbeleihung](/sale-und-leaseback).",
+          "Mehr dazu: [Auto beleihen und weiterfahren](/ratgeber/auto-beleihen-und-weiterfahren), [So funktioniert Sale & Leaseback](/ratgeber/wie-funktioniert-sale-and-leaseback) und unsere Seite [Sale & Leaseback / Fahrzeugbeleihung](/sale-und-leaseback).",
         ],
       },
     ],
@@ -431,6 +435,7 @@ export const articles: RatgeberArticle[] = [
         h2: "Warum Landwirte ihre Maschinen beleihen",
         paragraphs: [
           "In der Landwirtschaft steckt viel Kapital in der Technik, während die Einnahmen saisonal kommen. Vor der Saison fallen Saatgut, Dünger, Pacht und Personal an – das Geld aus der Ernte kommt erst Monate später. Mit Sale & Leaseback überbrücken Sie diese Lücke, ohne eine einzige Maschine abzugeben.",
+          "Sie möchten stattdessen einen neuen Traktor ohne Bankprüfung? Lesen Sie [Kann ich einen Traktor ohne Schufa leasen?](/ratgeber/traktor-leasen-ohne-schufa)",
         ],
       },
       {
@@ -469,7 +474,7 @@ export const articles: RatgeberArticle[] = [
       {
         h2: "Warum Transportunternehmen ihre LKW beleihen",
         paragraphs: [
-          "Im Transportgewerbe sind die Margen knapp und die laufenden Kosten hoch: Diesel, Maut, Reifen, Personal. Gleichzeitig zahlen Auftraggeber oft erst nach Wochen. Ein LKW steht mit hohem Wert in der Bilanz – mit Sale & Leaseback wird dieser Wert zu Liquidität.",
+          "Im Transportgewerbe sind die Margen knapp und die laufenden Kosten hoch: Diesel, Maut, Reifen, Personal. Gleichzeitig zahlen Auftraggeber oft erst nach Wochen. Ein LKW steht mit hohem Wert in der Bilanz – mit Sale & Leaseback wird dieser Wert zu Liquidität. Weitere Wege bei Engpässen: [Kurzfristig Liquidität für Unternehmen](/ratgeber/kurzfristig-liquiditaet-fuer-unternehmen).",
         ],
       },
       {
@@ -527,7 +532,7 @@ export const articles: RatgeberArticle[] = [
       {
         h2: "Wann es sich eher nicht lohnt",
         paragraphs: [
-          "Wenn Sie nur einen sehr kleinen Betrag brauchen oder die Maschine ohnehin bald verkaufen wollen, gibt es oft einfachere Wege. Sale & Leaseback ist auch kein Ersatz für eine dauerhaft unwirtschaftliche Kostenstruktur. Wir sagen Ihnen ehrlich, ob es für Ihren Betrieb passt.",
+          "Wenn Sie nur einen sehr kleinen Betrag brauchen oder die Maschine ohnehin bald verkaufen wollen, gibt es oft einfachere Wege. Sale & Leaseback ist auch kein Ersatz für eine dauerhaft unwirtschaftliche Kostenstruktur. Wir sagen Ihnen ehrlich, ob es für Ihren Betrieb passt. Brauchen Sie eine neue Maschine statt Kapital, ist [Traktor leasen ohne Schufa](/ratgeber/traktor-leasen-ohne-schufa) oft der bessere Weg.",
         ],
       },
       {
@@ -580,7 +585,7 @@ export const articles: RatgeberArticle[] = [
       {
         h2: "So geht es schneller",
         paragraphs: [
-          "Bei Master Leasing entfallen Schufa-Abfrage und Bankauskunft. Die Leasingentscheidung basiert auf Ihrer Selbstauskunft, den eingereichten Unterlagen und dem Fahrzeug selbst. Dadurch ist der Prozess schlank – die Zusage liegt oft innerhalb von 24 Stunden vor.",
+          "Bei Master Leasing entfallen Schufa-Abfrage und Bankauskunft. Die Leasingentscheidung basiert auf Ihrer Selbstauskunft, den eingereichten Unterlagen und dem Fahrzeug selbst. Dadurch ist der Prozess schlank – die Zusage liegt oft innerhalb von 24 Stunden vor. Das gilt auch, wenn [die Bank die Finanzierung bereits abgelehnt hat](/ratgeber/bank-hat-finanzierung-abgelehnt).",
         ],
         table: {
           head: ["Anbieter", "Typische Dauer", "Schufa-Abfrage"],
@@ -626,7 +631,7 @@ export const articles: RatgeberArticle[] = [
       {
         h2: "Warum Banken Gründern selten Leasing geben",
         paragraphs: [
-          "Banken bewerten vor allem die Vergangenheit: mehrere Jahresabschlüsse, stabile Umsätze, eine saubere Schufa. Ein Start-up hat genau das noch nicht. Die Folge: Ablehnung, obwohl Aufträge da sind und das Fahrzeug dringend gebraucht wird.",
+          "Banken bewerten vor allem die Vergangenheit: mehrere Jahresabschlüsse, stabile Umsätze, eine saubere Schufa. Ein Start-up hat genau das noch nicht. Die Folge: Ablehnung, obwohl Aufträge da sind und das Fahrzeug dringend gebraucht wird. Welche Nachweise Gründer stattdessen brauchen, steht in [Unterlagen für Leasing ohne Schufa](/ratgeber/unterlagen-leasing-ohne-schufa).",
         ],
       },
       {
@@ -676,7 +681,7 @@ export const articles: RatgeberArticle[] = [
       {
         h2: "Warum schlechte Bonität bei Banken das Aus bedeutet",
         paragraphs: [
-          "Schon ein einzelner Schufa-Eintrag, ein schwaches Geschäftsjahr oder eine kurze Selbstständigkeit reicht, damit eine Bank ablehnt. Für Kleinunternehmer ist das besonders hart – sie brauchen ihr Fahrzeug, um überhaupt Umsatz zu machen.",
+          "Schon ein einzelner Schufa-Eintrag, ein schwaches Geschäftsjahr oder eine kurze Selbstständigkeit reicht, damit eine Bank ablehnt. Für Kleinunternehmer ist das besonders hart – sie brauchen ihr Fahrzeug, um überhaupt Umsatz zu machen. Was Sie nach einer Absage tun können, lesen Sie unter [Bank hat die Finanzierung abgelehnt](/ratgeber/bank-hat-finanzierung-abgelehnt).",
         ],
       },
       {
@@ -689,7 +694,7 @@ export const articles: RatgeberArticle[] = [
           "Unbegrenzte Kilometer",
         ],
         paragraphs: [
-          "Speziell für PKW: [Auto leasen trotz negativer Schufa](/auto-leasen-trotz-negativer-schufa).",
+          "Speziell für PKW: [Auto leasen trotz negativer Schufa](/auto-leasen-trotz-negativer-schufa) und [Gebrauchtwagen ohne Schufa leasen](/ratgeber/gebrauchtwagen-leasing-ohne-schufa). Woran Sie einen seriösen Anbieter erkennen: [Ist Leasing ohne Schufa seriös?](/ratgeber/ist-leasing-ohne-schufa-serioes)",
         ],
       },
       {
@@ -731,8 +736,11 @@ export const articles: RatgeberArticle[] = [
           "Personalausweis oder Reisepass",
           "Gewerbeanmeldung oder Handelsregisterauszug",
           "Angebot, Link oder Daten zum Wunschfahrzeug",
-          "Gewünschte Laufzeit und Höhe der Sonderzahlung",
+          "Gewünschte Laufzeit und Höhe der Sonderzahlung – mehr dazu unter [Leasing ohne Schufa und ohne Anzahlung?](/ratgeber/leasing-ohne-schufa-ohne-anzahlung)",
           "Je nach Situation: aktuelle Geschäftsunterlagen",
+        ],
+        paragraphs: [
+          "Gründer ohne Jahresabschlüsse finden Hinweise im Beitrag [Leasing für Start-ups](/ratgeber/leasing-fuer-start-ups).",
         ],
       },
       {
@@ -781,7 +789,7 @@ export const articles: RatgeberArticle[] = [
       {
         h2: "Warum Leasing ohne Schufa überhaupt funktioniert",
         paragraphs: [
-          "Beim Leasing bleibt das Fahrzeug Eigentum der Leasinggesellschaft und dient damit selbst als Sicherheit. Zusätzlich sichert eine Leasingsonderzahlung das Risiko ab. Deshalb kann eine Leasinggesellschaft auch ohne Schufa-Abfrage entscheiden – auf Basis der eingereichten Unterlagen und des Fahrzeugs.",
+          "Beim Leasing bleibt das Fahrzeug Eigentum der Leasinggesellschaft und dient damit selbst als Sicherheit. Zusätzlich sichert eine Leasingsonderzahlung das Risiko ab. Deshalb kann eine Leasinggesellschaft auch ohne Schufa-Abfrage entscheiden – auf Basis der eingereichten [Unterlagen](/ratgeber/unterlagen-leasing-ohne-schufa) und des Fahrzeugs. Warum die Sonderzahlung dazugehört, erklärt [Leasing ohne Schufa und ohne Anzahlung?](/ratgeber/leasing-ohne-schufa-ohne-anzahlung)",
         ],
       },
       {
@@ -896,7 +904,7 @@ export const articles: RatgeberArticle[] = [
         bullets: [
           "Wunschfahrzeug beim Händler Ihrer Wahl aussuchen",
           "Angebot oder Link an uns senden",
-          "Leasingzusage ohne Schufa, oft innerhalb von 24 Stunden",
+          "Leasingzusage ohne Schufa, oft innerhalb von 24 Stunden – [warum das so schnell geht](/ratgeber/schnellste-leasing-zusage)",
           "Zulassung auf Ihre Firma bzw. Ihren Namen – und losfahren",
         ],
         paragraphs: [
@@ -912,7 +920,7 @@ export const articles: RatgeberArticle[] = [
           "Keine Schufa-Prüfung und kein Eintrag",
         ],
         paragraphs: [
-          "Alle Infos für PKW: [Auto leasen trotz negativer Schufa](/auto-leasen-trotz-negativer-schufa).",
+          "Alle Infos für PKW: [Auto leasen trotz negativer Schufa](/auto-leasen-trotz-negativer-schufa). Zur Sonderzahlung: [Leasing ohne Schufa und ohne Anzahlung?](/ratgeber/leasing-ohne-schufa-ohne-anzahlung)",
         ],
       },
     ],
@@ -939,7 +947,7 @@ export const articles: RatgeberArticle[] = [
       {
         h2: "Warum Landwirte ohne Schufa leasen",
         paragraphs: [
-          "Gerade in der Landwirtschaft passen die Kriterien der Banken oft nicht: schwankende Erträge, hohe Investitionen, lange Zyklen. Ein schwaches Erntejahr reicht, damit die Bank vorsichtiger wird. Beim Leasing ohne Schufa steht dagegen der Traktor selbst im Mittelpunkt.",
+          "Gerade in der Landwirtschaft passen die Kriterien der Banken oft nicht: schwankende Erträge, hohe Investitionen, lange Zyklen. Ein schwaches Erntejahr reicht, damit die Bank vorsichtiger wird. Beim Leasing ohne Schufa steht dagegen der Traktor selbst im Mittelpunkt. Ob sich für vorhandene Maschinen eher Sale & Leaseback lohnt, lesen Sie unter [Lohnt sich Sale & Leaseback für Landwirte?](/ratgeber/sale-and-leaseback-landwirtschaft)",
         ],
       },
       {
@@ -988,7 +996,7 @@ export const articles: RatgeberArticle[] = [
       {
         h2: "Warum Leasing ohne Schufa eine Sonderzahlung braucht",
         paragraphs: [
-          "Bei klassischem Leasing prüft die Bank Ihre Bonität ausführlich. Beim Leasing ohne Schufa entfällt diese Prüfung – das Risiko wird stattdessen über das Fahrzeug und eine Leasingsonderzahlung abgesichert. Das ist der Grund, warum Angebote mit „0 € Anzahlung und ohne Schufa“ meist unrealistisch sind.",
+          "Bei klassischem Leasing prüft die Bank Ihre Bonität ausführlich. Beim Leasing ohne Schufa entfällt diese Prüfung – das Risiko wird stattdessen über das Fahrzeug und eine Leasingsonderzahlung abgesichert. Das ist der Grund, warum Angebote mit „0 € Anzahlung und ohne Schufa“ meist unrealistisch sind – woran Sie seriöse Anbieter erkennen, steht in [Ist Leasing ohne Schufa seriös?](/ratgeber/ist-leasing-ohne-schufa-serioes)",
         ],
       },
       {
@@ -1011,7 +1019,7 @@ export const articles: RatgeberArticle[] = [
           "Sie brauchen ein neues Fahrzeug, haben aber kein freies Kapital für die Sonderzahlung? Wenn Sie bereits ein bezahltes Fahrzeug oder eine Maschine besitzen, können Sie es per [Sale & Leaseback / Fahrzeugbeleihung](/sale-und-leaseback) beleihen und das freigesetzte Kapital für die Sonderzahlung nutzen – ohne Bank und ohne Schufa.",
         ],
         bullets: [
-          "Vorhandenes Fahrzeug beleihen und weiterfahren",
+          "Vorhandenes Fahrzeug beleihen und weiterfahren – siehe [Auto beleihen und weiterfahren](/ratgeber/auto-beleihen-und-weiterfahren)",
           "Freigesetztes Kapital als Leasingsonderzahlung einsetzen",
           "Neues Fahrzeug ohne Schufa leasen",
         ],
@@ -1024,6 +1032,28 @@ export const articles: RatgeberArticle[] = [
     ],
   },
 ];
+
+// Kuratierte Querverweise je Beitrag (inkl. Brücken zwischen den Themen)
+export const relatedSlugs: Record<string, string[]> = {
+  "alternativen-zum-bankkredit": ["kurzfristig-liquiditaet-fuer-unternehmen", "wie-funktioniert-sale-and-leaseback", "bank-hat-finanzierung-abgelehnt"],
+  "kurzfristig-liquiditaet-fuer-unternehmen": ["kapital-aus-fuhrpark-freisetzen", "alternativen-zum-bankkredit", "auto-beleihen-und-weiterfahren"],
+  "kapital-aus-fuhrpark-freisetzen": ["lkw-beleihen", "kurzfristig-liquiditaet-fuer-unternehmen", "wie-funktioniert-sale-and-leaseback"],
+  "auto-beleihen-und-weiterfahren": ["auto-verpfaenden-oder-sale-and-leaseback", "wie-funktioniert-sale-and-leaseback", "leasing-ohne-schufa-ohne-anzahlung"],
+  "wie-funktioniert-sale-and-leaseback": ["auto-beleihen-und-weiterfahren", "auto-verpfaenden-oder-sale-and-leaseback", "alternativen-zum-bankkredit"],
+  "auto-verpfaenden-oder-sale-and-leaseback": ["auto-beleihen-und-weiterfahren", "wie-funktioniert-sale-and-leaseback", "kurzfristig-liquiditaet-fuer-unternehmen"],
+  "traktor-landmaschinen-beleihen": ["sale-and-leaseback-landwirtschaft", "traktor-leasen-ohne-schufa", "kapital-aus-fuhrpark-freisetzen"],
+  "lkw-beleihen": ["kapital-aus-fuhrpark-freisetzen", "auto-beleihen-und-weiterfahren", "kurzfristig-liquiditaet-fuer-unternehmen"],
+  "sale-and-leaseback-landwirtschaft": ["traktor-landmaschinen-beleihen", "traktor-leasen-ohne-schufa", "kurzfristig-liquiditaet-fuer-unternehmen"],
+  "schnellste-leasing-zusage": ["unterlagen-leasing-ohne-schufa", "bank-hat-finanzierung-abgelehnt", "ist-leasing-ohne-schufa-serioes"],
+  "leasing-fuer-start-ups": ["unterlagen-leasing-ohne-schufa", "leasing-trotz-schlechter-bonitaet", "schnellste-leasing-zusage"],
+  "leasing-trotz-schlechter-bonitaet": ["bank-hat-finanzierung-abgelehnt", "ist-leasing-ohne-schufa-serioes", "gebrauchtwagen-leasing-ohne-schufa"],
+  "unterlagen-leasing-ohne-schufa": ["schnellste-leasing-zusage", "leasing-fuer-start-ups", "leasing-ohne-schufa-ohne-anzahlung"],
+  "ist-leasing-ohne-schufa-serioes": ["leasing-ohne-schufa-ohne-anzahlung", "unterlagen-leasing-ohne-schufa", "leasing-trotz-schlechter-bonitaet"],
+  "bank-hat-finanzierung-abgelehnt": ["leasing-trotz-schlechter-bonitaet", "alternativen-zum-bankkredit", "schnellste-leasing-zusage"],
+  "gebrauchtwagen-leasing-ohne-schufa": ["leasing-ohne-schufa-ohne-anzahlung", "schnellste-leasing-zusage", "leasing-trotz-schlechter-bonitaet"],
+  "traktor-leasen-ohne-schufa": ["traktor-landmaschinen-beleihen", "sale-and-leaseback-landwirtschaft", "unterlagen-leasing-ohne-schufa"],
+  "leasing-ohne-schufa-ohne-anzahlung": ["auto-beleihen-und-weiterfahren", "ist-leasing-ohne-schufa-serioes", "gebrauchtwagen-leasing-ohne-schufa"],
+};
 
 export function getArticle(slug: string) {
   return articles.find((a) => a.slug === slug);
