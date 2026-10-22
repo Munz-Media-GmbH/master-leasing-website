@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Traktor Leasing & Finanzierung ohne Schufa | Master Leasing",
   description:
     "Traktor leasen oder finanzieren – neu und gebraucht, alle Marken. Traktor-Finanzierung, Leasing & Mietkauf ohne Bank & Schufa. Auch Trecker & Schlepper. Zusage oft in 24 Stunden.",
-  alternates: { canonical: "https://master-leasing.com/traktor-leasing/" },
+  alternates: { canonical: "https://master-leasing.com/traktor-leasing" },
   robots: "follow, index",
 };
 

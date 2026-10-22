@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Datenschutzerklärung – Master Leasing",
   robots: "noindex, nofollow",
-  alternates: { canonical: "https://master-leasing.com/datenschutzerklaerung/" },
+  alternates: { canonical: "https://master-leasing.com/datenschutz" },
 };
 
 const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (

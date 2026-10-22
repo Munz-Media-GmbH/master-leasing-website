@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "AGB – Master Leasing",
   robots: "noindex, nofollow",
-  alternates: { canonical: "https://master-leasing.com/agb/" },
+  alternates: { canonical: "https://master-leasing.com/agb" },
 };
 
 const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (

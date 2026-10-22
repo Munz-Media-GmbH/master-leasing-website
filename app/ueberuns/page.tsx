@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Über uns – Master Leasing | Fair. Einfach. Seriös.",
   description:
     "Master Leasing ist einer der größten bankenunabhängigen Leasingmakler Deutschlands. Leasing ohne Schufa, ohne Bankprüfung – für Unternehmer, Selbstständige und Existenzgründer.",
-  alternates: { canonical: "https://master-leasing.com/ueberuns/" },
+  alternates: { canonical: "https://master-leasing.com/ueberuns" },
   robots: "follow, index",
 };
 

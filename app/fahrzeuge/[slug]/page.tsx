@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${vehicle.title} – Master Leasing`,
     description: vehicle.description ?? `${vehicle.title} ohne Schufa leasen. Jetzt Angebot anfragen.`,
+    alternates: { canonical: `https://master-leasing.com/fahrzeuge/${slug}` },
   };
 }
 

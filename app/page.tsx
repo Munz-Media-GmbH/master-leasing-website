@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import BrandsCarousel from "@/components/BrandsCarousel";
@@ -13,6 +14,12 @@ import FAQSection from "@/components/FAQSection";
 import RatgeberTeaser from "@/components/RatgeberTeaser";
 import Footer from "@/components/Footer";
 import { getVehiclesForListing } from "@/lib/sanity";
+
+// Canonical nur für die Startseite (nicht im Root-Layout, sonst erben alle Seiten ohne
+// eigenen Canonical – z.B. Fahrzeug-Detailseiten – die Startseite als Canonical)
+export const metadata: Metadata = {
+  alternates: { canonical: "https://master-leasing.com/" },
+};
 
 export default async function Home() {
   const vehicles = await getVehiclesForListing();

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Landmaschinen-Leasing & Traktor-Finanzierung ohne Schufa | Master Leasing",
   description:
     "Landmaschinen leasen ohne Schufa: Traktoren, Mähdrescher, Anbaugeräte & Landtechnik – auch gebraucht. Traktor-Finanzierung & Sale & Leaseback für Liquidität. Zusage oft in 24 Stunden.",
-  alternates: { canonical: "https://master-leasing.com/landmaschinen-leasing/" },
+  alternates: { canonical: "https://master-leasing.com/landmaschinen-leasing" },
   robots: "follow, index",
 };
 

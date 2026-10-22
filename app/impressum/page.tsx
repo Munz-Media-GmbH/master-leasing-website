@@ -6,7 +6,7 @@ import MuenzMediaBlock from "@/components/MuenzMediaBlock";
 export const metadata: Metadata = {
   title: "Impressum – Master Leasing",
   robots: "noindex, nofollow",
-  alternates: { canonical: "https://master-leasing.com/impressum/" },
+  alternates: { canonical: "https://master-leasing.com/impressum" },
 };
 
 export default function ImpressumPage() {

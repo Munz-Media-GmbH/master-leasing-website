@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Geräteleasing – Maschinen & Geräte leasen | Master Leasing",
   description:
     "Geräteleasing ohne Schufa bei Master Leasing: Landmaschinen, Nutzfahrzeuge, Baumaschinen, IT-Geräte und mehr – flexibel, schnell, ohne Bonitätsprüfung.",
-  alternates: { canonical: "https://master-leasing.com/geraeteleasing/" },
+  alternates: { canonical: "https://master-leasing.com/geraeteleasing" },
   robots: "follow, index",
 };
 

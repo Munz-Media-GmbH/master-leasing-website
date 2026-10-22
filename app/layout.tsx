@@ -35,7 +35,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
     },
   },
-  alternates: { canonical: "https://master-leasing.com/" },
   openGraph: {
     type: "website",
     locale: "de_DE",

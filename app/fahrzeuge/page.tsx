@@ -8,7 +8,7 @@ import { getVehiclesForListing } from "@/lib/sanity";
 export const metadata: Metadata = {
   title: "Fahrzeuge – Master Leasing",
   description: "Entdecken Sie unsere aktuellen Leasingfahrzeuge. PKW, Transporter, LKW – ohne Schufa, ohne Bankprüfung.",
-  alternates: { canonical: "https://master-leasing.com/fahrzeuge/" },
+  alternates: { canonical: "https://master-leasing.com/fahrzeuge" },
   robots: "follow, index",
 };
 

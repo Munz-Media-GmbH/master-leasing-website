@@ -126,6 +126,11 @@ const nextConfig: NextConfig = {
       },
       // Alte WP-Kategorie-Archive → Fahrzeug-Übersicht bzw. Startseite
       {
+        source: "/datenschutzerklaerung",
+        destination: "/datenschutz",
+        permanent: true,
+      },
+      {
         source: "/category/fahrzeuge",
         destination: "/fahrzeuge",
         permanent: true,

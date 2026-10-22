@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Kontakt – Master Leasing",
   description:
     "Kontaktieren Sie Master Leasing für Ihre Leasinganfrage. Tel: 03331 29 77 92 · Am Waldrand 10, 16278 Angermünde · anfrage@master-leasing.com",
-  alternates: { canonical: "https://master-leasing.com/kontakt/" },
+  alternates: { canonical: "https://master-leasing.com/kontakt" },
   robots: "follow, index",
 };
 
