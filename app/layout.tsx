@@ -21,7 +21,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Auto Leasing ohne Schufa – Leasing für gewerbliche Kunden | Master Leasing",
+  title: "Auto Leasing ohne Schufa für Gewerbekunden | Master Leasing",
   description:
     "Master Leasing: Auto Leasing ohne Schufa für gewerbliche Kunden. Keine Bonitätsprüfung, flexible Konditionen, Zusage in 24h. Jetzt Leasinganfrage stellen!",
   robots: {

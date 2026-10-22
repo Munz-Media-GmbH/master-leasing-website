@@ -21,7 +21,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = getArticle(slug);
   if (!article) return { title: "Beitrag nicht gefunden" };
   return {
-    title: article.seoTitle,
+    // Marke nur anhängen, wenn der Titel dann noch ≤ 60 Zeichen bleibt
+    title: article.seoTitle.length <= 43 ? `${article.seoTitle} | Master Leasing` : article.seoTitle,
     description: article.description,
     alternates: { canonical: `${SITE}/ratgeber/${article.slug}` },
     robots: "follow, index",

@@ -9,9 +9,9 @@ import { articles } from "@/lib/ratgeber";
 const URL = "https://master-leasing.com/auto-leasen-trotz-negativer-schufa";
 
 export const metadata: Metadata = {
-  title: "Auto leasen trotz negativer Schufa – für Gewerbekunden | Master Leasing",
+  title: "Auto leasen trotz negativer Schufa | Master Leasing",
   description:
-    "Auto leasen trotz negativer Schufa: Leasing ohne Schufa-Abfrage und ohne Bankauskunft für Selbstständige, Kleinunternehmer und Firmen. Neu & gebraucht, freie Händlerwahl, Zusage oft in 24 Stunden.",
+    "Auto leasen trotz negativer Schufa: Leasing ohne Schufa-Abfrage für Selbstständige und Firmen. Neu & gebraucht, Zusage oft in 24 Stunden.",
   alternates: { canonical: URL },
   robots: "follow, index",
 };

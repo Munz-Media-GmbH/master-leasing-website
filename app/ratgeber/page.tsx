@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { articles, topicMeta, type RatgeberTopic } from "@/lib/ratgeber";
 
 export const metadata: Metadata = {
-  title: "Ratgeber: Leasing ohne Schufa & Sale & Leaseback | Master Leasing",
+  title: "Ratgeber: Leasing ohne Schufa & Sale & Leaseback",
   description:
     "Antworten auf die häufigsten Fragen zu Leasing ohne Schufa und Sale & Leaseback / Fahrzeugbeleihung – kurz, verständlich und für Gewerbekunden.",
   alternates: { canonical: "https://master-leasing.com/ratgeber" },

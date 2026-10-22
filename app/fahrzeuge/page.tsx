@@ -6,8 +6,9 @@ import CTABanner from "@/components/CTABanner";
 import { getVehiclesForListing } from "@/lib/sanity";
 
 export const metadata: Metadata = {
-  title: "Fahrzeuge – Master Leasing",
-  description: "Entdecken Sie unsere aktuellen Leasingfahrzeuge. PKW, Transporter, LKW – ohne Schufa, ohne Bankprüfung.",
+  title: "Fahrzeuge ohne Schufa leasen – Angebote | Master Leasing",
+  description:
+    "Aktuelle Fahrzeugangebote von Master Leasing: PKW, Transporter und Nutzfahrzeuge ohne Schufa leasen – für Gewerbekunden, Zusage oft in 24 Stunden.",
   alternates: { canonical: "https://master-leasing.com/fahrzeuge" },
   robots: "follow, index",
 };
@@ -31,7 +32,7 @@ export default async function FahrzeugePage() {
           <div className="container">
             <span className="overline">Unsere Fahrzeuge</span>
             <h1 style={{ color: "#fff", marginBottom: "16px" }}>
-              Ihr Wunsch<span style={{ color: "#E15C55" }}>fahrzeug</span>
+              Fahrzeuge <span style={{ color: "#E15C55" }}>ohne Schufa leasen</span>
             </h1>
             <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "18px", maxWidth: "600px" }}>
               Freie Fahrzeugwahl – PKW, Transporter, LKW, Maschinen und mehr.

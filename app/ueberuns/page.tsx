@@ -5,9 +5,9 @@ import Footer from "@/components/Footer";
 import ModalOpenButton from "@/components/ModalOpenButton";
 
 export const metadata: Metadata = {
-  title: "Über uns – Master Leasing | Fair. Einfach. Seriös.",
+  title: "Über uns – Leasingmakler aus Angermünde | Master Leasing",
   description:
-    "Master Leasing ist einer der größten bankenunabhängigen Leasingmakler Deutschlands. Leasing ohne Schufa, ohne Bankprüfung – für Unternehmer, Selbstständige und Existenzgründer.",
+    "Master Leasing ist Ihr bankenunabhängiger Leasingmakler aus Angermünde: Leasing ohne Schufa für Selbstständige und Unternehmen in ganz Deutschland.",
   alternates: { canonical: "https://master-leasing.com/ueberuns" },
   robots: "follow, index",
 };
@@ -79,8 +79,8 @@ export default function UeberUnsPage() {
           <div className="container" style={{ position: "relative", zIndex: 2 }}>
             <span className="overline">Über uns</span>
             <h1 style={{ color: "#fff", marginBottom: "20px", maxWidth: "700px" }}>
-              Ihr leasing{" "}
-              <span style={{ color: "#E15C55" }}>master</span>
+              Ihr Leasingmakler für{" "}
+              <span style={{ color: "#E15C55" }}>Leasing ohne Schufa</span>
             </h1>
             <p
               style={{

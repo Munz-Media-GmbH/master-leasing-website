@@ -41,6 +41,7 @@ export const topicMeta: Record<
 };
 
 const D = "2026-10-19";
+const U = "2026-10-22"; // letzte inhaltliche Änderung (Querverlinkung, Titel)
 const IMG_AGRAR = "/images/fahrzeug-landwirtschaft.jpg";
 
 export const articles: RatgeberArticle[] = [
@@ -51,13 +52,13 @@ export const articles: RatgeberArticle[] = [
     slug: "alternativen-zum-bankkredit",
     topic: "slb",
     question: "Welche Alternativen zum Bankkredit gibt es für Unternehmen?",
-    seoTitle: "Alternativen zum Bankkredit für Unternehmen – ohne Bank & Schufa | Master Leasing",
+    seoTitle: "Alternativen zum Bankkredit für Unternehmen",
     description:
-      "Leasing, Mietkauf, Factoring oder Sale & Leaseback: die wichtigsten Alternativen zum Bankkredit im Vergleich. So setzen Sie Kapital aus Fahrzeugen frei – ohne Bank und Schufa.",
+      "Leasing, Mietkauf, Factoring oder Sale & Leaseback: Alternativen zum Bankkredit im Vergleich – und wie Sie Kapital ohne Bank und Schufa freisetzen.",
     shortAnswer:
       "Die wichtigsten Alternativen zum Bankkredit sind Leasing, Mietkauf, Factoring und Sale & Leaseback. Wer bereits Fahrzeuge oder Maschinen besitzt, kommt mit Sale & Leaseback am schnellsten an Kapital: Das Fahrzeug wird an eine Leasinggesellschaft verkauft und direkt zurückgeleast. Sie erhalten sofort Liquidität – ohne Bankkredit und ohne Schufa-Abfrage – und nutzen das Fahrzeug weiter.",
     published: D,
-    updated: D,
+    updated: U,
     readingMinutes: 4,
     sections: [
       {
@@ -123,13 +124,13 @@ export const articles: RatgeberArticle[] = [
     slug: "kurzfristig-liquiditaet-fuer-unternehmen",
     topic: "slb",
     question: "Wie bekomme ich kurzfristig Liquidität für mein Unternehmen?",
-    seoTitle: "Kurzfristig Liquidität für Unternehmen – ohne Bankkredit | Master Leasing",
+    seoTitle: "Kurzfristig Liquidität für Unternehmen",
     description:
-      "Liquiditätsengpass im Betrieb? So kommen Unternehmen kurzfristig an Kapital: Sale & Leaseback, Kontokorrent und Factoring im Vergleich – ohne Bank und Schufa aus dem eigenen Fuhrpark.",
+      "Liquiditätsengpass im Betrieb? So kommen Unternehmen kurzfristig an Kapital – mit Sale & Leaseback aus dem eigenen Fuhrpark, ohne Bank und Schufa.",
     shortAnswer:
       "Am schnellsten kommen Unternehmen an Liquidität, wenn sie vorhandene Werte nutzen. Mit Sale & Leaseback verkaufen Sie ein bezahltes Fahrzeug oder eine Maschine an eine Leasinggesellschaft und leasen es direkt zurück. Der Kaufpreis wird ausgezahlt, das Fahrzeug bleibt im Einsatz – ohne Bankkredit und ohne Schufa-Abfrage. Ein Angebot liegt meist nach 1–3 Werktagen vor.",
     published: D,
-    updated: D,
+    updated: U,
     readingMinutes: 4,
     sections: [
       {
@@ -187,13 +188,13 @@ export const articles: RatgeberArticle[] = [
     slug: "kapital-aus-fuhrpark-freisetzen",
     topic: "slb",
     question: "Wie kann ich Kapital aus meinem Fuhrpark freisetzen?",
-    seoTitle: "Kapital aus dem Fuhrpark freisetzen – Fuhrpark beleihen | Master Leasing",
+    seoTitle: "Kapital aus dem Fuhrpark freisetzen",
     description:
       "Bezahlte Firmenfahrzeuge binden Kapital. So setzen Sie es mit Sale & Leaseback frei – für einzelne Fahrzeuge oder den ganzen Fuhrpark, ohne Bank und Schufa.",
     shortAnswer:
       "Kapital aus dem Fuhrpark setzen Sie mit Sale & Leaseback frei: Sie verkaufen bezahlte Fahrzeuge an eine Leasinggesellschaft und leasen sie direkt zurück. Der Kaufpreis fließt als Liquidität ins Unternehmen, die Fahrzeuge bleiben im Einsatz. Das funktioniert für einzelne Fahrzeuge oder den ganzen Fuhrpark – ohne Bankkredit und ohne Schufa-Abfrage.",
     published: D,
-    updated: D,
+    updated: U,
     readingMinutes: 3,
     sections: [
       {
@@ -241,13 +242,13 @@ export const articles: RatgeberArticle[] = [
     slug: "auto-beleihen-und-weiterfahren",
     topic: "slb",
     question: "Kann ich mein Auto beleihen und trotzdem weiterfahren?",
-    seoTitle: "Auto beleihen und weiterfahren – ohne Pfandhaus | Master Leasing",
+    seoTitle: "Auto beleihen und weiterfahren – ohne Pfandhaus",
     description:
-      "Auto beleihen und weiterfahren: Mit Sale & Leaseback bekommen Gewerbekunden sofort Kapital und behalten ihr Fahrzeug im Einsatz – ohne Pfandhaus, Bank und Schufa.",
+      "Auto beleihen und weiterfahren: Mit Sale & Leaseback bekommen Gewerbekunden sofort Kapital – ohne Pfandhaus, ohne Bank und ohne Schufa.",
     shortAnswer:
       "Ja. Mit Sale & Leaseback beleihen Sie Ihr Auto und fahren weiter: Sie verkaufen das Fahrzeug an eine Leasinggesellschaft und leasen es direkt zurück. Sie erhalten sofort Kapital, das Auto bleibt bei Ihnen – anders als beim Pfandhaus, wo es abgestellt wird. Das Angebot richtet sich an Gewerbekunden und ist ohne Schufa-Abfrage möglich.",
     published: D,
-    updated: D,
+    updated: U,
     readingMinutes: 3,
     sections: [
       {
@@ -298,13 +299,13 @@ export const articles: RatgeberArticle[] = [
     slug: "wie-funktioniert-sale-and-leaseback",
     topic: "slb",
     question: "Wie funktioniert Sale & Leaseback bei Fahrzeugen?",
-    seoTitle: "Sale and Leaseback bei Fahrzeugen einfach erklärt | Master Leasing",
+    seoTitle: "Sale and Leaseback bei Fahrzeugen einfach erklärt",
     description:
       "Sale and Leaseback einfach erklärt: Fahrzeug verkaufen, zurückleasen, weiterfahren. Ablauf, Vorteile und Voraussetzungen für Gewerbekunden.",
     shortAnswer:
       "Bei Sale & Leaseback verkaufen Sie ein Fahrzeug, das Ihnen gehört, an eine Leasinggesellschaft und leasen es im selben Zug zurück. Sie erhalten den Kaufpreis als Liquidität und zahlen danach eine feste monatliche Leasingrate. Das Fahrzeug bleibt die ganze Zeit in Ihrem Betrieb im Einsatz.",
     published: D,
-    updated: D,
+    updated: U,
     readingMinutes: 3,
     sections: [
       {
@@ -357,13 +358,13 @@ export const articles: RatgeberArticle[] = [
     slug: "auto-verpfaenden-oder-sale-and-leaseback",
     topic: "slb",
     question: "Auto verpfänden oder Sale & Leaseback – was ist der Unterschied?",
-    seoTitle: "Auto verpfänden oder Sale & Leaseback? Der Vergleich | Master Leasing",
+    seoTitle: "Auto verpfänden oder Sale & Leaseback? Vergleich",
     description:
       "Auto verpfänden beim Pfandhaus oder Sale & Leaseback? Unterschiede bei Nutzung, Kosten und Laufzeit – und warum Gewerbekunden ihr Fahrzeug behalten sollten.",
     shortAnswer:
       "Beim Verpfänden geben Sie Ihr Auto im Pfandhaus ab und bekommen ein Pfanddarlehen – fahren können Sie in dieser Zeit nicht. Bei Sale & Leaseback verkaufen Sie das Fahrzeug an eine Leasinggesellschaft, leasen es direkt zurück und fahren weiter. Für Betriebe, die ihr Fahrzeug täglich brauchen, ist Sale & Leaseback deshalb meist die bessere Wahl.",
     published: D,
-    updated: D,
+    updated: U,
     readingMinutes: 3,
     sections: [
       {
@@ -409,13 +410,13 @@ export const articles: RatgeberArticle[] = [
     topic: "slb",
     image: IMG_AGRAR,
     question: "Kann ich meinen Traktor oder meine Landmaschinen beleihen?",
-    seoTitle: "Traktor & Landmaschinen beleihen – Sale & Leaseback | Master Leasing",
+    seoTitle: "Traktor & Landmaschinen beleihen und weiterfahren",
     description:
       "Traktor beleihen und weiter aufs Feld: Mit Sale & Leaseback setzen Landwirte und Lohnunternehmer Kapital aus Schleppern, Mähdreschern und Landtechnik frei.",
     shortAnswer:
       "Ja. Traktoren, Schlepper und Landmaschinen lassen sich per Sale & Leaseback beleihen: Sie verkaufen die Maschine an eine Leasinggesellschaft und leasen sie direkt zurück. Sie erhalten sofort Kapital, die Maschine bleibt auf Ihrem Hof im Einsatz. Das geht markenunabhängig, für neue und gebrauchte Technik – ohne Bank und ohne Schufa-Abfrage.",
     published: D,
-    updated: D,
+    updated: U,
     readingMinutes: 3,
     sections: [
       {
@@ -462,13 +463,13 @@ export const articles: RatgeberArticle[] = [
     topic: "slb",
     image: "/images/fahrzeug-lkw.jpg",
     question: "Kann ich meinen LKW beleihen, um schnell Liquidität zu bekommen?",
-    seoTitle: "LKW beleihen und weiterfahren – Sale & Leaseback | Master Leasing",
+    seoTitle: "LKW beleihen und weiterfahren – Sale & Leaseback",
     description:
-      "LKW, Sattelzug oder Anhänger beleihen: Mit Sale & Leaseback bekommen Transportunternehmen schnell Kapital – und der LKW bleibt auf der Straße. Ohne Bank & Schufa.",
+      "LKW, Sattelzug oder Anhänger beleihen: Mit Sale & Leaseback schnell Kapital bekommen – der LKW bleibt auf der Straße. Ohne Bank & Schufa.",
     shortAnswer:
       "Ja. Mit Sale & Leaseback beleihen Sie Ihren LKW, ohne ihn abzugeben: Sie verkaufen ihn an eine Leasinggesellschaft und leasen ihn direkt zurück. Der Kaufpreis wird ausgezahlt, der LKW bleibt auf Tour. Das funktioniert für Zugmaschinen, Sattelzüge, Anhänger und schwere Nutzfahrzeuge – ohne Bank und ohne Schufa-Abfrage.",
     published: D,
-    updated: D,
+    updated: U,
     readingMinutes: 3,
     sections: [
       {
@@ -510,13 +511,13 @@ export const articles: RatgeberArticle[] = [
     topic: "slb",
     image: IMG_AGRAR,
     question: "Lohnt sich Sale & Leaseback für Landwirte?",
-    seoTitle: "Sale and Leaseback für Landwirte – lohnt sich das? | Master Leasing",
+    seoTitle: "Sale and Leaseback für Landwirte – lohnt sich das?",
     description:
-      "Wann sich Sale & Leaseback für landwirtschaftliche Betriebe lohnt: Liquidität vor der Saison, Investitionen und Engpässe überbrücken – mit Traktor und Landtechnik.",
+      "Wann sich Sale & Leaseback für Landwirte lohnt: Liquidität vor der Saison und für Investitionen – Traktor und Technik bleiben im Einsatz.",
     shortAnswer:
       "Für viele Landwirte lohnt sich Sale & Leaseback, weil Ausgaben und Einnahmen zeitlich weit auseinanderliegen. Sie verkaufen eine bezahlte Maschine an eine Leasinggesellschaft, leasen sie zurück und haben sofort Kapital für Saatgut, Pacht oder Investitionen. Die Technik bleibt auf dem Hof im Einsatz – ohne Bank und ohne Schufa-Abfrage.",
     published: D,
-    updated: D,
+    updated: U,
     readingMinutes: 3,
     sections: [
       {
@@ -564,13 +565,13 @@ export const articles: RatgeberArticle[] = [
     slug: "schnellste-leasing-zusage",
     topic: "schufa",
     question: "Welcher Leasinganbieter gibt die schnellste Zusage?",
-    seoTitle: "Leasing mit schneller Zusage – oft in 24 Stunden | Master Leasing",
+    seoTitle: "Leasing mit schneller Zusage – oft in 24 Stunden",
     description:
       "Leasing schnell bekommen: Warum Banken oft lange brauchen und wie Gewerbekunden ohne Schufa-Abfrage oft innerhalb von 24 Stunden eine Leasingzusage erhalten.",
     shortAnswer:
       "Am schnellsten sind Leasinganbieter, die ohne klassische Bankprüfung und ohne Schufa-Abfrage entscheiden. Bei Master Leasing liegt die Leasingzusage für Gewerbekunden oft schon innerhalb von 24 Stunden vor. Bank- und Herstellerleasing brauchen dafür meist deutlich länger, weil Bilanzen, Bankauskunft und Schufa ausführlich geprüft werden.",
     published: D,
-    updated: D,
+    updated: U,
     readingMinutes: 3,
     sections: [
       {
@@ -619,13 +620,13 @@ export const articles: RatgeberArticle[] = [
     slug: "leasing-fuer-start-ups",
     topic: "schufa",
     question: "Leasing für Start-ups: Wer least Fahrzeuge und Maschinen ohne Bonitätshistorie?",
-    seoTitle: "Leasing für Start-ups & Existenzgründer – ohne Schufa | Master Leasing",
+    seoTitle: "Leasing für Start-ups & Existenzgründer ohne Schufa",
     description:
       "Junge Firma ohne Bilanzen? So bekommen Start-ups und Existenzgründer Fahrzeug- und Maschinenleasing ohne Schufa-Abfrage und ohne Bonitätshistorie.",
     shortAnswer:
       "Start-ups und Existenzgründer scheitern bei Banken oft an fehlenden Bilanzen und fehlender Bonitätshistorie. Master Leasing vermittelt Leasing ohne Schufa-Abfrage und ohne Bankauskunft – auch für junge Unternehmen. Geleast werden können PKW, Transporter, LKW, Maschinen und Geräte, neu oder gebraucht. Die Zusage liegt oft innerhalb von 24 Stunden vor.",
     published: D,
-    updated: D,
+    updated: U,
     readingMinutes: 3,
     sections: [
       {
@@ -669,13 +670,13 @@ export const articles: RatgeberArticle[] = [
     slug: "leasing-trotz-schlechter-bonitaet",
     topic: "schufa",
     question: "Gibt es Leasing für Kleinunternehmer und Selbstständige mit schlechter Bonität?",
-    seoTitle: "Leasing trotz schlechter Bonität für Selbstständige | Master Leasing",
+    seoTitle: "Leasing trotz schlechter Bonität für Selbstständige",
     description:
       "Schlechte Bonität, Schufa-Eintrag oder Bank-Absage? So bekommen Kleinunternehmer und Selbstständige trotzdem Fahrzeugleasing – ohne Schufa-Abfrage.",
     shortAnswer:
       "Ja. Master Leasing vermittelt Leasing für Kleinunternehmer und Selbstständige auch bei schlechter Bonität – ohne Schufa-Abfrage und ohne Bankauskunft. Ein negativer Schufa-Eintrag ist damit kein Ausschlussgrund. Geleast werden PKW, Transporter, LKW und Maschinen, neu oder gebraucht. Eine Zusage gibt es oft innerhalb von 24 Stunden.",
     published: D,
-    updated: D,
+    updated: U,
     readingMinutes: 3,
     sections: [
       {
@@ -720,13 +721,13 @@ export const articles: RatgeberArticle[] = [
     slug: "unterlagen-leasing-ohne-schufa",
     topic: "schufa",
     question: "Welche Unterlagen brauche ich für Leasing ohne Schufa?",
-    seoTitle: "Unterlagen für Leasing ohne Schufa – die Checkliste | Master Leasing",
+    seoTitle: "Unterlagen für Leasing ohne Schufa – Checkliste",
     description:
-      "Welche Unterlagen braucht man für Leasing ohne Schufa? Checkliste für Gewerbekunden: Selbstauskunft, Nachweise, Fahrzeugdaten – und was im Vergleich zum Bank-Leasing wegfällt.",
+      "Welche Unterlagen braucht man für Leasing ohne Schufa? Checkliste für Gewerbekunden – und was im Vergleich zum Bank-Leasing wegfällt.",
     shortAnswer:
       "Für Leasing ohne Schufa brauchen Gewerbekunden deutlich weniger Unterlagen als bei einer Bank. In der Regel genügen eine Selbstauskunft, ein Ausweis, ein Gewerbenachweis oder Handelsregisterauszug und die Angaben zum Wunschfahrzeug. Schufa-Auskunft und Bankauskunft entfallen. Welche Unterlagen im Einzelfall noch nötig sind, klären wir nach Ihrer Anfrage persönlich.",
     published: D,
-    updated: D,
+    updated: U,
     readingMinutes: 3,
     sections: [
       {
@@ -777,13 +778,13 @@ export const articles: RatgeberArticle[] = [
     slug: "ist-leasing-ohne-schufa-serioes",
     topic: "schufa",
     question: "Ist Leasing ohne Schufa seriös?",
-    seoTitle: "Ist Leasing ohne Schufa seriös? So erkennen Sie gute Anbieter | Master Leasing",
+    seoTitle: "Ist Leasing ohne Schufa seriös? Daran erkennen Sie es",
     description:
       "Leasing ohne Schufa – seriös oder Abzocke? Woran Sie seriöse Anbieter erkennen, welche Warnsignale es gibt und worauf Gewerbekunden achten sollten.",
     shortAnswer:
       "Leasing ohne Schufa ist seriös, wenn der Anbieter transparent arbeitet: mit klarem Vertrag, fester Rate, vorab genannten Kosten und ohne Vorkasse. Statt der Schufa werden Selbstauskunft, Unterlagen und das Fahrzeug geprüft. Vorsicht ist geboten bei Anbietern, die Geld vor der Leasingzusage verlangen oder keine Adresse und keinen festen Ansprechpartner haben.",
     published: D,
-    updated: D,
+    updated: U,
     readingMinutes: 4,
     sections: [
       {
@@ -828,13 +829,13 @@ export const articles: RatgeberArticle[] = [
     slug: "bank-hat-finanzierung-abgelehnt",
     topic: "schufa",
     question: "Meine Bank hat die Finanzierung abgelehnt – wie komme ich trotzdem an ein Firmenfahrzeug?",
-    seoTitle: "Bank lehnt Finanzierung ab? So kommen Sie trotzdem an ein Firmenfahrzeug | Master Leasing",
+    seoTitle: "Leasing oder Finanzierung abgelehnt – was nun?",
     description:
       "Finanzierung abgelehnt? Diese Wege bleiben Selbstständigen und Unternehmen: Leasing ohne Schufa, Sale & Leaseback und Mietkauf – ohne Bankprüfung.",
     shortAnswer:
       "Wenn die Bank ablehnt, ist Leasing ohne Schufa der direkteste Weg zum Firmenfahrzeug: Die Leasinggesellschaft entscheidet ohne Schufa-Abfrage und ohne Bankauskunft – bei Master Leasing oft innerhalb von 24 Stunden. Besitzen Sie bereits bezahlte Fahrzeuge, können Sie zusätzlich per Sale & Leaseback Kapital freisetzen, etwa für die Sonderzahlung.",
     published: D,
-    updated: D,
+    updated: U,
     readingMinutes: 3,
     sections: [
       {
@@ -882,13 +883,13 @@ export const articles: RatgeberArticle[] = [
     topic: "schufa",
     image: "/images/fahrzeug-pkw.jpg",
     question: "Kann ich einen Gebrauchtwagen ohne Schufa leasen?",
-    seoTitle: "Gebrauchtwagen leasen ohne Schufa – für Gewerbekunden | Master Leasing",
+    seoTitle: "Gebrauchtwagen-Leasing ohne Schufa für Gewerbe",
     description:
-      "Gebrauchtwagen-Leasing ohne Schufa: freie Händlerwahl, alle Marken, unbegrenzte Kilometer. So leasen Selbstständige und Firmen gebrauchte Fahrzeuge ohne Bankprüfung.",
+      "Gebrauchtwagen-Leasing ohne Schufa: freie Händlerwahl, alle Marken, unbegrenzte Kilometer – für Selbstständige und Firmen, ohne Bankprüfung.",
     shortAnswer:
       "Ja. Bei Master Leasing können Gewerbekunden auch Gebrauchtwagen ohne Schufa leasen. Sie wählen das Fahrzeug bei einem Händler Ihrer Wahl, wir vermitteln das Leasing ohne Schufa-Abfrage und ohne Bankauskunft. Möglich sind PKW, Transporter und Nutzfahrzeuge aller Marken – mit unbegrenzten Kilometern und einer Zusage oft innerhalb von 24 Stunden.",
     published: D,
-    updated: D,
+    updated: U,
     readingMinutes: 3,
     sections: [
       {
@@ -935,13 +936,13 @@ export const articles: RatgeberArticle[] = [
     topic: "schufa",
     image: IMG_AGRAR,
     question: "Kann ich einen Traktor ohne Schufa leasen?",
-    seoTitle: "Traktor leasen ohne Schufa – für Landwirte & Lohnunternehmer | Master Leasing",
+    seoTitle: "Traktor leasen ohne Schufa – für Landwirte",
     description:
       "Traktor ohne Schufa leasen: neu oder gebraucht, alle Marken, bankenunabhängig. So bekommen Landwirte und Lohnunternehmer ihren Schlepper ohne Bankprüfung.",
     shortAnswer:
       "Ja. Master Leasing vermittelt Traktor-Leasing ohne Schufa-Abfrage und ohne klassische Bankprüfung – für Landwirte, Lohnunternehmer und Gewerbebetriebe in ganz Deutschland. Möglich sind neue und gebrauchte Traktoren aller Marken, von Fendt bis John Deere. Neben Leasing gibt es auch Finanzierung und Mietkauf. Die Zusage liegt oft innerhalb von 24 Stunden vor.",
     published: D,
-    updated: D,
+    updated: U,
     readingMinutes: 3,
     sections: [
       {
@@ -984,13 +985,13 @@ export const articles: RatgeberArticle[] = [
     slug: "leasing-ohne-schufa-ohne-anzahlung",
     topic: "schufa",
     question: "Leasing ohne Schufa und ohne Anzahlung – geht das?",
-    seoTitle: "Leasing ohne Schufa und ohne Anzahlung – geht das? | Master Leasing",
+    seoTitle: "Leasing ohne Schufa und ohne Anzahlung – geht das?",
     description:
       "Auto leasen ohne Schufa und ohne Anzahlung: Warum beim Leasing ohne Schufa meist eine Sonderzahlung nötig ist und wie Sie das Kapital dafür trotzdem aufbringen.",
     shortAnswer:
       "Komplett ohne Anzahlung ist Leasing ohne Schufa in der Regel nicht möglich. Weil keine Schufa-Abfrage stattfindet, sichert die Leasinggesellschaft ihr Risiko über eine Leasingsonderzahlung ab – bei Master Leasing je nach Tarif ab 15 Prozent des Fahrzeugpreises. Fehlt dafür das Kapital, lässt es sich oft per Sale & Leaseback aus einem vorhandenen Fahrzeug freisetzen.",
     published: D,
-    updated: D,
+    updated: U,
     readingMinutes: 3,
     sections: [
       {
